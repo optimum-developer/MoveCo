@@ -30,7 +30,11 @@
 <![endif]-->
 
 </head>
-
+<style type="text/css">
+	.eagle_logo{
+		font-size: 35px;
+	}
+</style>
 <body>
 <!--[if lt IE 9]>
 	<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
@@ -82,8 +86,9 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-4 col-lg-3 text-center text-sm-left">
-						<a href="./" class="logo">
-							<img src="/assets/logo.png" alt="">
+						<a class="logo eagle_logo" style="font-family: serif;">
+						<b>1300 </b><b style="color: #273754;">EAGLE </b><b style="color: #273754;">MOVERS </b>
+							<!-- <img src="/assets/logo.png" alt=""> -->
 						</a>
 					</div>
 					<div class="col-sm-8 col-lg-9 text-center text-sm-right teasers-line">
@@ -130,8 +135,11 @@
 						<!-- main nav start -->
 						<nav class="mainmenu_wrapper">
 							<ul class="mainmenu nav sf-menu">
-								<li class="active">
+								<li id="home_page_link" class="active">
 									<a href="<%=root_path%>">Home</a>
+								</li>
+								<li id="home_page_about_us" class="home_page_about_us">
+									<a  href="<%=home_about_us_path%>">About Us</a>
 								</li>
 
 								<li>
@@ -152,399 +160,6 @@
 								<li>
 									<a href="<%=home_plan_moving_path%>">Plan Moving</a>
 								</li>
-
-								<li>
-									<a href="#">Features</a>
-									<div class="mega-menu">
-										<ul class="mega-menu-row">
-											<li class="mega-menu-col">
-												<a href="#">Headers</a>
-												<ul>
-													<li>
-														<a href="header1.html">Header Type 1</a>
-													</li>
-													<li>
-														<a href="header2.html">Header Type 2</a>
-													</li>
-													<li>
-														<a href="header3.html">Header Type 3</a>
-													</li>
-													<li>
-														<a href="header4.html">Header Type 4</a>
-													</li>
-													<li>
-														<a href="header5.html">Header Type 5</a>
-													</li>
-													<li>
-														<a href="header6.html">Header Type 6</a>
-													</li>
-												</ul>
-											</li>
-											<li class="mega-menu-col">
-												<a href="#">Side Menus</a>
-												<ul>
-													<li>
-														<a href="header_side1.html">Slide Left Light</a>
-													</li>
-													<li>
-														<a href="header_side2.html">Slide Right Light</a>
-													</li>
-													<li>
-														<a href="header_side3.html">Push Left Light</a>
-													</li>
-													<li>
-														<a href="header_side4.html">Push Right Light</a>
-													</li>
-													<li>
-														<a href="header_side5.html">Slide Left Dark</a>
-													</li>
-													<li>
-														<a href="header_side6.html">Slide Right Dark</a>
-													</li>
-													<li>
-														<a href="header_side7.html">Push Left Dark</a>
-													</li>
-													<li>
-														<a href="header_side8.html">Push Right Dark</a>
-													</li>
-													<li>
-														<a href="header_side_superfish.html">Superfish Menu</a>
-													</li>
-												</ul>
-											</li>
-											<li class="mega-menu-col">
-												<a href="breadcrumbs1.html">Breadcrumbs</a>
-												<ul>
-													<li>
-														<a href="breadcrumbs1.html">Breadcrumbs 1</a>
-													</li>
-													<li>
-														<a href="breadcrumbs2.html">Breadcrumbs 2</a>
-													</li>
-													<li>
-														<a href="breadcrumbs3.html">Breadcrumbs 3</a>
-													</li>
-													<li>
-														<a href="breadcrumbs4.html">Breadcrumbs 4</a>
-													</li>
-													<li>
-														<a href="breadcrumbs5.html">Breadcrumbs 5</a>
-													</li>
-													<li>
-														<a href="breadcrumbs6.html">Breadcrumbs 6</a>
-													</li>
-												</ul>
-											</li>
-											<li class="mega-menu-col">
-												<a href="footer1.html">Footers</a>
-												<ul>
-													<li>
-														<a href="footer1.html">Footer Type 1</a>
-													</li>
-													<li>
-														<a href="footer2.html">Footer Type 2</a>
-													</li>
-													<li>
-														<a href="footer3.html">Footer Type 3</a>
-													</li>
-													<li>
-														<a href="footer4.html">Footer Type 4</a>
-													</li>
-													<li>
-														<a href="footer5.html">Footer Type 5</a>
-													</li>
-												</ul>
-											</li>
-											<li class="mega-menu-col">
-												<a href="copyright1.html">Copyrights</a>
-
-												<ul>
-													<li>
-														<a href="copyright1.html">Copyrights 1</a>
-													</li>
-													<li>
-														<a href="copyright2.html">Copyrights 2</a>
-													</li>
-													<li>
-														<a href="copyright3.html">Copyrights 3</a>
-													</li>
-													<li>
-														<a href="copyright4.html">Copyrights 4</a>
-													</li>
-													<li>
-														<a href="copyright5.html">Copyrights 5</a>
-													</li>
-												</ul>
-											</li>
-
-										</ul>
-									</div>
-									<!-- eof mega menu -->
-								</li>
-								<!-- eof features -->
-
-								<li>
-									<a href="<%=home_about_us_path%>">Pages</a>
-									<ul>
-										<!-- features -->
-										<li>
-											<a href="<%=home_shortcodes_teasers_path%>">Shortcodes&amp;Widgets</a>
-											<ul>
-
-												<li>
-													<a href="<%=home_shortcodes_teasers_path%>">Teasers</a>
-												</li>
-												<li>
-													<a href="<%=home_shortcodes_buttons_path%>">Buttons</a>
-												</li>
-												<li>
-													<a href="<%=home_about_us_path%>">Progress</a>
-												</li>
-												<li>
-													<a href="<%=home_shortcodes_socialicons_path%>">Social Icons</a>
-												</li>
-												<li>
-													<a href="<%=home_shortcodes_tabs_path%>">Tabs &amp; Collapse</a>
-												</li>
-												<li>
-													<a href="<%=home_shortcodes_bootstrap_path%>">Bootstrap Elements</a>
-												</li>
-												<li>
-													<a href="<%= home_shortcodes_typography_path%>">Typography</a>
-												</li>
-												<li>
-													<a href="<%=home_shortcodes_widgets_path%>">Widgets</a>
-												</li>
-												<li>
-													<a href="<%=home_shortcodes_animation_path%>">Animation</a>
-												</li>
-												<li>
-													<a href="<%=home_shortcodes_icons_path%>">Template Icons</a>
-												</li>
-											</ul>
-										</li>
-										<!-- eof features -->
-
-										<!-- header -->
-										<li>
-											<a href="header1.html">Headers</a>
-											<ul>
-												<li>
-													<a href="header1.html">Header 1</a>
-												</li>
-												<li>
-													<a href="header2.html">Header 2</a>
-												</li>
-												<li>
-													<a href="header3.html">Header 3</a>
-												</li>
-												<li>
-													<a href="header4.html">Header 4</a>
-												</li>
-												<li>
-													<a href="header5.html">Header 5</a>
-												</li>
-												<li>
-													<a href="header6.html">Header 6</a>
-												</li>
-												<li>
-													<a href="header_side1.html">Side Headers</a>
-													<ul>
-														<li>
-															<a href="header_side1.html">Slide Left Light</a>
-														</li>
-														<li>
-															<a href="header_side2.html">Slide Right Light</a>
-														</li>
-														<li>
-															<a href="header_side3.html">Push Left Light</a>
-														</li>
-														<li>
-															<a href="header_side4.html">Push Right Light</a>
-														</li>
-														<li>
-															<a href="header_side5.html">Slide Left Dark</a>
-														</li>
-														<li>
-															<a href="header_side6.html">Slide Right Dark</a>
-														</li>
-														<li>
-															<a href="header_side7.html">Push Left Dark</a>
-														</li>
-														<li>
-															<a href="header_side8.html">Push Right Dark</a>
-														</li>
-														<li>
-															<a href="header_side_superfish.html">Superfish Menu</a>
-														</li>
-													</ul>
-												</li>
-
-											</ul>
-										</li>
-										<!-- eof header -->
-
-										<!-- breadcrumbs -->
-										<li>
-											<a href="breadcrumbs1.html">Breadcrumbs</a>
-											<ul>
-												<li>
-													<a href="breadcrumbs1.html">Breadcrumbs 1</a>
-												</li>
-												<li>
-													<a href="breadcrumbs2.html">Breadcrumbs 2</a>
-												</li>
-												<li>
-													<a href="breadcrumbs3.html">Breadcrumbs 3</a>
-												</li>
-												<li>
-													<a href="breadcrumbs4.html">Breadcrumbs 4</a>
-												</li>
-												<li>
-													<a href="breadcrumbs5.html">Breadcrumbs 5</a>
-												</li>
-												<li>
-													<a href="breadcrumbs6.html">Breadcrumbs 6</a>
-												</li>
-											</ul>
-										</li>
-										<!-- eof breadcrumbs -->
-
-										<!-- footer -->
-										<li>
-											<a href="footer1.html">Footer</a>
-											<ul>
-												<li>
-													<a href="footer1.html">Footer 1</a>
-												</li>
-												<li>
-													<a href="footer2.html">Footer 2</a>
-												</li>
-												<li>
-													<a href="footer3.html">Footer 3</a>
-												</li>
-												<li>
-													<a href="footer4.html">Footer 4</a>
-												</li>
-												<li>
-													<a href="footer5.html">Footer 5</a>
-												</li>
-											</ul>
-										</li>
-										<!-- eof footer -->
-
-										<!-- copyright -->
-										<li>
-											<a href="copyright1.html">Copyright</a>
-											<ul>
-												<li>
-													<a href="copyright1.html">Copyright 1</a>
-												</li>
-												<li>
-													<a href="copyright2.html">Copyright 2</a>
-												</li>
-												<li>
-													<a href="copyright3.html">Copyright 3</a>
-												</li>
-												<li>
-													<a href="copyright4.html">Copyright 4</a>
-												</li>
-												<li>
-													<a href="copyright5.html">Copyright 5</a>
-												</li>
-											</ul>
-										</li>
-										<!-- eof copyright -->
-
-										<!-- events -->
-										<li>
-											<a href="events-left.html">Events</a>
-											<ul>
-												<li>
-													<a href="events-left.html">Left Sidebar</a>
-												</li>
-												<li>
-													<a href="events-right.html">Right Sidebar</a>
-												</li>
-												<li>
-													<a href="events-full.html">Full Width</a>
-												</li>
-												<li>
-													<a href="event-single-left.html">Single Event</a>
-													<ul>
-														<li>
-															<a href="event-single-left.html">Left Sidebar</a>
-														</li>
-														<li>
-															<a href="event-single-right.html">Right Sidebar</a>
-														</li>
-														<li>
-															<a href="event-single-full.html">Full Width</a>
-														</li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-										<!-- eof events -->
-
-										<li>
-											<a href="about.html">About</a>
-										</li>
-
-										<li>
-											<a href="team.html">Team</a>
-											<ul>
-												<li>
-													<a href="team.html">Team</a>
-												</li>
-												<li>
-													<a href="team-single.html">Team member</a>
-												</li>
-											</ul>
-										</li>
-
-										<li>
-											<a href="appointment.html">Make Appointment</a>
-										</li>
-
-										<li>
-											<a href="pricing.html">Pricing</a>
-										</li>
-
-										<li>
-											<a href="comingsoon1.html">Comingsoon</a>
-											<ul>
-												<li>
-													<a href="comingsoon1.html">Comingsoon</a>
-												</li>
-												<li>
-													<a href="comingsoon2.html">Comingsoon 2</a>
-												</li>
-											</ul>
-										</li>
-
-										<li>
-											<a href="timetable.html">Timetable</a>
-										</li>
-
-										<li>
-											<a href="faq.html">FAQ</a>
-											<ul>
-												<li>
-													<a href="faq.html">FAQ</a>
-												</li>
-												<li>
-													<a href="faq2.html">FAQ 2</a>
-												</li>
-											</ul>
-										</li>
-										<li>
-											<a href="404.html">404</a>
-										</li>
-
-									</ul>
-								</li>
-								<!-- eof pages -->
 
 								<!-- gallery -->
 								<li>
@@ -675,58 +290,6 @@
 								</li>
 								<!-- eof Gallery -->
 
-								<!-- blog -->
-								<li>
-									<a href="blog-right.html">Blog</a>
-									<ul>
-
-										<li>
-											<a href="blog-right.html">Right Sidebar</a>
-										</li>
-										<li>
-											<a href="blog-left.html">Left Sidebar</a>
-										</li>
-										<li>
-											<a href="blog-full.html">No Sidebar</a>
-										</li>
-										<li>
-											<a href="blog-mosaic.html">Blog Grid</a>
-										</li>
-
-										<li>
-											<a href="blog-single-right.html">Post</a>
-											<ul>
-												<li>
-													<a href="blog-single-right.html">Right Sidebar</a>
-												</li>
-												<li>
-													<a href="blog-single-left.html">Left Sidebar</a>
-												</li>
-												<li>
-													<a href="blog-single-full.html">No Sidebar</a>
-												</li>
-											</ul>
-										</li>
-
-										<li>
-											<a href="blog-single-video-right.html">Video Post</a>
-											<ul>
-												<li>
-													<a href="blog-single-video-right.html">Right Sidebar</a>
-												</li>
-												<li>
-													<a href="blog-single-video-left.html">Left Sidebar</a>
-												</li>
-												<li>
-													<a href="blog-single-video-full.html">No Sidebar</a>
-												</li>
-											</ul>
-										</li>
-
-									</ul>
-								</li>
-								<!-- eof blog -->
-
 								<!-- contacts -->
 								<li>
 									<a href="<%= home_contact_path%>">Contact us</a>
@@ -769,9 +332,11 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-4 col-sm-12">
-							<img src="/assets/logo-light.png" alt="">
+							<h3 class="widget-title highlight2">About Melbourne Speedie Movers</h3>
 							<p class="topmargin_40 bottommargin_30">
-								Aliquam suscipit dignissim mauris, in malesuada nibh consequat a. Suspendisse quis scelerisque sapien. Proin pulvinar porttitor metus vitae tinci. Pellentesque habitant morbi.
+								We have taken the initiative to start the company in order to facilitate transport services for various needs. We believe in the importance of operating as independent carriers, 
+								responding quickly to your needs with prompt, 
+								effective and global solutions.
 							</p>
 							<div>
 								<a href="#" class="social-icon bg-icon theme-bg-icon rounded-icon soc-facebook"></a>
@@ -784,75 +349,14 @@
 
 						<div class="col-md-4 col-sm-6">
 							<div class="widget widget_recent_entries">
-								<h3 class="widget-title highlight2">Recent Post</h3>
-								<ul>
-									<li>
-										<div class="media">
-											<div class="media-left">
-												<img src="/assets/recent_post1.jpg" alt="" />
-											</div>
-											<div class="media-body">
-												<span class="date">
-													<time datetime="2016-01-10T15:05:23+00:00" class="entry-date">
-														June 06, 2016
-													</time>
-												</span>
-												<a class="comments-link" href="blog-single-right.html#comments">
-													3 comments
-												</a>
-												<h3 class="entry-title small">
-													<a href="blog-single-right.html">
-														Cras viverra lobortis placerat. Nam vestibulum placerat dapibus.
-													</a>
-												</h3>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="media">
-											<div class="media-left">
-												<img src="/assets/recent_post2.jpg" alt="" />
-											</div>
-											<div class="media-body">
-												<span class="date">
-													<time datetime="2016-01-10T15:05:23+00:00" class="entry-date">
-														June 06, 2016
-													</time>
-												</span>
-												<a class="comments-link" href="blog-single-right.html#comments">
-													0 comments
-												</a>
-												<h3 class="entry-title small">
-													<a href="blog-single-right.html">
-														Cras dapibus tellus in volutpat porta. Cras bibendum eros nec.
-													</a>
-												</h3>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="media">
-											<div class="media-left">
-												<img src="/assets/recent_post3.jpg" alt="" />
-											</div>
-											<div class="media-body">
-												<span class="date">
-													<time datetime="2016-01-10T15:05:23+00:00" class="entry-date">
-														June 06, 2016
-													</time>
-												</span>
-												<a class="comments-link" href="blog-single-right.html#comments">
-													5 comments
-												</a>
-												<h3 class="entry-title small">
-													<a href="blog-single-right.html">
-														Duis in dapibus orci. Praesent magi sem, dignissim sit amet.
-													</a>
-												</h3>
-											</div>
-										</div>
-									</li>
-								</ul>
+								<h3 class="widget-title highlight2">Quick Contact</h3>
+								<p class="topmargin_40 bottommargin_30">
+									Please call 0422621651 (we are available 24/7) 
+									or write at 
+									Email:info@melbournespeediemovers.com.au. 
+
+									Melbourne Speedie Movers
+								</p>
 							</div>
 						</div>
 
@@ -871,9 +375,8 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12 text-center">
-							<p>&copy; MoveCo 2016 | Created with
-								<i class="fa fa-heart-o highlight"></i> by
-								<a href="http://modernwebtemplates.com">MWTemplates</a>
+							<p>
+								Copyright © Furniture Removalists Melbourne | Cheap Furniture Movers in Melbourne 
 							</p>
 						</div>
 					</div>
