@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get 'home/shortcodes_animation'=>'home#shortcodes_animation'
   get 'home/shortcodes_icons'=>'home#shortcodes_icons'
   get 'home/contact'=>'home#contact'
+  get 'home/why_us'=>'home#why_us'
+  get 'home/pricing'=>'home#pricing'
   
 
 

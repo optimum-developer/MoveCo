@@ -49,4 +49,7 @@ class HomeController < ApplicationController
 
   def contact
   end
+
+  def why_us
+  end
 end
