@@ -1,15 +1,36 @@
 class HomeController < ApplicationController
   # layout 'layout_basic'
+  
   def index
   end
 
   def about_us
-
   end
 
   def service
   end
 
+  def  service_residential_moving  
+  end
+
+  def service_office_moving
+  end
+ 
+  def service_piano_moving
+  end
+  
+  def service_pool_moving
+  end
+  
+  def service_interstate_moving
+  end
+
+  def service_packing_moving
+  end     
+  
+  def service_secure_storage_moving
+  end      
+    
   def service_single
   end
 
