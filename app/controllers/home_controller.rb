@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   # layout 'layout_basic'
+
   
   def index
   end
@@ -72,5 +73,32 @@ class HomeController < ApplicationController
   end
 
   def why_us
+  end
+
+  def call_me_back
+    admin_message = "You have got a request for call back from " + params[:name] + "(" + params[:phone_number] + ")" + 
+    client_message = "Hi" + params[:name] + "Your call request has been sent to MoveCo. You will reciever a call shortly." 
+    account_sid = 'ACb0f41764355db14c3a603052c904b64a'
+    auth_token = 'f77af0f7227e941ef1d74f8d419de2a9'
+    @client = Twilio::REST::Client.new account_sid, auth_token
+        begin
+        # Client
+        @client.api.account.messages.create({
+          :from => '+16783299584',
+          :to => params[:phone_number],
+          :body => client_message,
+          :media_url => 'https://climacons.herokuapp.com/clear.png'
+        })
+        # Admin
+        @client.api.account.messages.create({
+          :from => '+16783299584',
+          :to => '+919417537249',
+          :body => admin_message,
+          :media_url => 'https://climacons.herokuapp.com/clear.png'
+        })
+        redirect_to root_path
+        rescue => e
+          redirect_to root_path
+        end
   end
 end
