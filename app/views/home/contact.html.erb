@@ -30,25 +30,55 @@
 							
 							<div class="tl tr"><div role="form" class="wpcf7" id="wpcf7-f266-p24-o1" lang="en-US" dir="ltr">
 							<div class="screen-reader-response"></div>
-							<form name="" action="/contact-us/#wpcf7-f266-p24-o1" method="post" class="wpcf7-form" novalidate="novalidate" style="float: right">
+							
+							
+							<%= form_for @new_contact, :html => {class: 'wpcf7-form', style: 'float: right'} do |f| %>
 							<p><strong style="">Feedback Form</strong> </p>
-							<div style="display: none;">
-							<input type="hidden" name="_wpcf7" value="266" />
-							<input type="hidden" name="_wpcf7_version" value="4.2" />
-							<input type="hidden" name="_wpcf7_locale" value="en_US" />
-							<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f266-p24-o1" />
-							<input type="hidden" name="_wpnonce" value="c9bd18704f" />
+							
+							<div class="form-group">
+								<label for="quote-name" class="sr-only">Name
+									<span class="required">*</span>
+								</label>
+								<div class="input-group">
+									<i class="flaticon-avatar highlight"></i>
+									<input type="text" aria-required="true" size="30" value="" name="contact[name]" id="quote-name" class="form-control" placeholder="Name" required>
+								</div>
 							</div>
-							<p>Your Name (required)<br />
-							    <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span> </p>
-							<p>Your Email (required)<br />
-							    <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" /></span> </p>
-							<p>Subject<br />
-							    <span class="wpcf7-form-control-wrap your-subject"><input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" /></span> </p>
-							<p>Your Message<br />
-							    <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control-wrap" aria-invalid="false" style="height: 100px; border-color: rgba(52, 52, 52, 0.2); border-width: 2px;"></textarea></span> </p>
-							<p><input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit theme_button color2" style="width: 100%;" /></p>
-							<div class="wpcf7-response-output wpcf7-display-none"></div></form></div></div>
+
+
+							<div class="form-group">
+								<label for="quote-email" class="sr-only">E-mail
+									<span class="required">*</span>
+								</label>
+								<div class="input-group">
+									<i class="flaticon-envelope highlight"></i>
+									<input type="email" aria-required="true" size="30" value=""  name="contact[email]" id="quote-email" class="form-control" placeholder="E-mail" required>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="quote-email" class="sr-only">Subject
+									<span class="required">*</span>
+								</label>
+								<div class="input-group">
+									<i class="flaticon-edit highlight"></i>
+									<input type="text" aria-required="true" size="30" value=""  name="contact[subject]" id="quote-email" class="form-control" placeholder="Subject" required>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="quote-description" class="sr-only">Your Message
+									<span class="required">*</span>
+								</label>
+								<div class="input-group">
+									<i class="fa fa-pencil-square" aria-hidden="true"></i>
+									<textarea aria-required="true" rows="5" cols="45" name="contact[message]" id="quote-description" class="form-control" placeholder="Your Message" required></textarea>
+								</div>
+							</div>							
+							<input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit theme_button color2" style="width: 100%;" /></p>
+							<div class="wpcf7-response-output wpcf7-display-none"></div>
+							<%end%>
+						</div></div>
 							<div class="tb col-md-12" style="padding-bottom: 75px;">
 							<h4>Locate Us On Map</h4>
 							<p><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3159.0074751970346!2d145.061086!3d-37.6490283!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6495aae3b3ad5%3A0x3cd9986f0cf6d995!2sMelbourne+Speedie+Movers!5e0!3m2!1sen!2sau!4v1439446608999" width="99.5%" height="450" frameborder="0" style="border:0"></iframe></div>

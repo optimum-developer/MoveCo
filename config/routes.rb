@@ -26,6 +26,10 @@ Rails.application.routes.draw do
   get 'home/why_us'=>'home#why_us'
   get 'home/pricing'=>'home#pricing'
   post 'home/call_me_back' => 'home#call_me_back'
+
+  resources :request_quotes
+  resources :contacts
+
   
 
 

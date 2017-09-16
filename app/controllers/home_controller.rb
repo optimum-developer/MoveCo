@@ -3,12 +3,14 @@ class HomeController < ApplicationController
 
   
   def index
+    @new_req=RequestQuote.new
   end
 
   def about_us
   end
 
   def service
+    @new_req=RequestQuote.new
   end
 
   def  service_residential_moving  
@@ -70,6 +72,7 @@ class HomeController < ApplicationController
   end
 
   def contact
+    @new_contact=Contact.new
   end
 
   def why_us
@@ -101,4 +104,5 @@ class HomeController < ApplicationController
           redirect_to root_path
         end
   end
+
 end

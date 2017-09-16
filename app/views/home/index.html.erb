@@ -220,52 +220,7 @@ REQUEST A CALL BACK</a>
 							<div class="content-card with_background offset-card">
 								<h3 class="bold text-uppercase inverse_bg_color text-center">get a quote</h3>
 								<div class="with_padding">
-
-									<form class="quote-form" method="post" action="./">
-										<div class="form-group">
-											<label for="quote-name" class="sr-only">Name
-												<span class="required">*</span>
-											</label>
-											<div class="input-group">
-												<i class="flaticon-avatar highlight"></i>
-												<input type="text" aria-required="true" size="30" value="" name="quote-name" id="quote-name" class="form-control" placeholder="Name">
-											</div>
-										</div>
-
-										<div class="form-group">
-											<label for="quote-email" class="sr-only">E-mail
-												<span class="required">*</span>
-											</label>
-											<div class="input-group">
-												<i class="flaticon-envelope highlight"></i>
-												<input type="text" aria-required="true" size="30" value="" name="quote-email" id="quote-email" class="form-control" placeholder="E-mail">
-											</div>
-										</div>
-
-										<div class="form-group">
-											<label for="quote-phone" class="sr-only">Phone
-												<span class="required">*</span>
-											</label>
-											<div class="input-group">
-												<i class="flaticon-phone-call highlight"></i>
-												<input type="text" aria-required="true" size="30" value="" name="quote-phone" id="quote-phone" class="form-control" placeholder="Phone">
-											</div>
-										</div>
-
-										<div class="form-group">
-											<label for="quote-description" class="sr-only">Description
-												<span class="required">*</span>
-											</label>
-											<div class="input-group">
-												<i class="flaticon-edit highlight"></i>
-												<textarea aria-required="true" rows="5" cols="45" name="quote-description" id="quote-description" class="form-control" placeholder="Description"></textarea>
-											</div>
-										</div>
-
-										<div class="text-center topmargin_40">
-											<button type="submit" id="quote_submit" name="quote_submit" class="theme_button color2">Send request</button>
-										</div>
-									</form>
+									<%= render partial: "get_quote_form"%>
 
 								</div>
 							</div>
