@@ -3488,6 +3488,10 @@ body.boxed {
 	color: #868686;
 }
 
+.pricing_white_content {
+	color: white;
+}
+
 .ls h1,
 .ls h2,
 .ls h3,
@@ -9285,6 +9289,20 @@ a.teaser-link:hover .teaser_icon i {
 	padding: 5px;
 }
 
+.price-table-wrap:hover
+{
+    box-shadow: 0px 0px 130px #000000;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform:1(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
+
 .prices-row .price-table-wrap.highlighted {
 	width: 40%;
 }
@@ -9386,6 +9404,13 @@ a.teaser-link:hover .teaser_icon i {
 	list-style: none;
 }
 
+.price-table-image {
+	position: relative;
+	margin: 0;
+	padding: 15px 30px 80px;
+	list-style: none;
+}
+
 .price-table ul {
 	padding: 0;
 	list-style: none;
@@ -9425,7 +9450,7 @@ a.teaser-link:hover .teaser_icon i {
 }
 
 .plan-name h3 {
-	font-size: 30px;
+	font-size: 18px;
 	font-weight: 800;
 	text-transform: uppercase;
 	margin: 0;
@@ -9440,7 +9465,7 @@ a.teaser-link:hover .teaser_icon i {
 
 .plan-price {
 	position: relative;
-	font-size: 58px;
+	font-size: 18px;
 	font-weight: 800;
 	line-height: 1;
   /* dollar sign */
@@ -9481,6 +9506,10 @@ a.teaser-link:hover .teaser_icon i {
 	background-color: #f5f5f5;
 }
 
+.price-table.style1 {
+	background-color: #606e86;
+}
+
 .highlighted .price-table.style2 {
 	max-width: 100%;
 }
@@ -9490,6 +9519,11 @@ a.teaser-link:hover .teaser_icon i {
 }
 
 .price-table.style2 .plan-price {
+	padding-bottom: 0;
+	color: #f69323;
+}
+
+.price-table.style1 .plan-price {
 	padding-bottom: 0;
 	color: #f69323;
 }
