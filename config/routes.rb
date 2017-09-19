@@ -23,12 +23,16 @@ Rails.application.routes.draw do
   get 'home/shortcodes_animation'=>'home#shortcodes_animation'
   get 'home/shortcodes_icons'=>'home#shortcodes_icons'
   get 'home/contact'=>'home#contact'
+  get 'home/book_online'=>'home#book_online_detail'
+
   get 'home/why_us'=>'home#why_us'
   get 'home/pricing'=>'home#pricing'
   post 'home/call_me_back' => 'home#call_me_back'
 
   resources :request_quotes
   resources :contacts
+  resources :book_online_details
+
 
   
 

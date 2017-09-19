@@ -1,0 +1,203 @@
+
+
+<section class="ls section_padding_top_100 section_padding_bottom_75 columns_margin_bottom_30">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<div class="framed-heading">
+					<h2 class="section_header" style="color: #273754;">
+						BOOK ONLINE
+					</h2>
+				</div>
+				<p>
+					Please fill out the following information and press the SUBMIT button. 
+				</p>
+				<div class="framed-heading">
+					<h5 class="section_header" style="font-size:30px ; color: #273754;">
+						Details
+					</h5>
+				</div>
+
+				
+
+				<%= form_for @book_online, :html => {class: 'quote-form row topmargin_40'} do |f| %>
+
+
+					<div class="col-sm-6">
+
+
+						<div class="bottommargin_10">
+							<label for="quote-first-name" class="sr-only">First Name
+								<span class="required">*</span>
+							</label>
+							<div class="input-group">
+								<i class="flaticon-avatar highlight"></i>
+								<input type="text" aria-required="true" size="30" value="" name="book_online_detail[first_name]" id="quote-first-name" class="form-control" placeholder="First Name">
+							</div>
+						</div>
+
+						<div class="bottommargin_10">
+							<label for="quote-last-name" class="sr-only">Last Name
+								<span class="required">*</span>
+							</label>
+							<div class="input-group">
+								<i class="flaticon-avatar highlight"></i>
+								<input type="text" aria-required="true" size="30" value="" name="book_online_detail[last_name]"  id="quote-last-name" class="form-control" placeholder="Last Name">
+							</div>
+						</div>
+
+						<div class="bottommargin_10">
+							<label for="quote-email" class="sr-only">E-mail
+								<span class="required">*</span>
+							</label>
+							<div class="input-group">
+								<i class="flaticon-envelope highlight"></i>
+								<input type="text" aria-required="true" size="30" value="" name="book_online_detail[email]"  id="quote-email" class="form-control" placeholder="E-mail">
+							</div>
+						</div>
+
+						<div class="bottommargin_10">
+							<label for="quote-home-phone" class="sr-only">Home phone</label>
+							<div class="input-group">
+								<i class="flaticon-phone-call highlight"></i>
+								<input type="text" size="30" value="" name="book_online_detail[home_phone_number]"  id="quote-home-phone" class="form-control" placeholder="Home phone">
+							</div>
+						</div>
+
+						<div class="bottommargin_10">
+							<label for="quote-mobile-phone2" class="sr-only">Mobile phone</label>
+							<div class="input-group">
+								<i class="flaticon-phone-call highlight"></i>
+								<input type="text" size="30" value="" name="book_online_detail[mobile_phone_number]"  id="quote-mobile-phone2" class="form-control" placeholder="Mobile phone">
+							</div>
+						</div>
+
+						<div class="bottommargin_10">
+							<label for="quote-sender-place" class="sr-only">Pickup</label>
+							<div class="input-group">
+								<i class="flaticon-truck highlight"></i>
+								<input type="text" size="30" value="" name="book_online_detail[move_from]" id="quote-sender-place" class="form-control" placeholder="Pickup Address">
+							</div>
+						</div>
+
+						<div class="bottommargin_10">
+							<label for="quote-receiver-place" class="sr-only">Drop</label>
+							<div class="input-group">
+								<i class="flaticon-truck highlight"></i>
+								<input type="text" size="30" value="" name="book_online_detail[move_to]" id="quote-receiver-place" class="form-control" placeholder="Drop-off Address">
+							</div>
+						</div>
+
+
+					</div>
+
+					<div class="col-sm-6">
+
+						<div class="bottommargin_10">
+							<label for="quote-town" class="sr-only">Date to move</label>
+							<div class="input-group">
+								<i class="fa fa-calendar" aria-hidden="true"></i>
+								<input size="30" value="" onfocus="(this.type='date')" name="book_online_detail[date_to_move]" id="quote-town" class="form-control" placeholder="Date to move" style="color: currentColor;">
+
+							</div>
+						</div>
+
+						<div class="bottommargin_10">
+							<label for="quote-town" class="sr-only">Town / City</label>
+							<div class="input-group">
+								<i class="flaticon-house highlight"></i>
+								<input type="text" size="30" value="" name="book_online_detail[city]" id="quote-town" class="form-control" placeholder="Town / City">
+							</div>
+						</div>
+
+
+						<div class="bottommargin_10">
+							<label for="quote-country" class="sr-only">State / Country</label>
+							<div class="input-group">
+								<i class="flaticon-placeholder highlight"></i>
+								<input type="text" size="30" value="" name="book_online_detail[country]"id="quote-country" class="form-control" placeholder="State / Country">
+							</div>
+						</div>
+
+						<div class="bottommargin_10">
+							<label for="quote-zipcode" class="sr-only">Postal / Zipcode</label>
+							<div class="input-group">
+								<i class="flaticon-edit highlight"></i>
+								<input type="text" size="30" value="" name="book_online_detail[zipcode]" id="quote-zipcode" class="form-control" placeholder="Postal / Zipcode">
+							</div>
+						</div>
+
+						<div class="bottommargin_10">
+							<label for="quote-cargo" class="sr-only">Preffered Time Slot</label>
+							<div class="input-group select-group">
+								<i class="fa fa-calendar-times-o" aria-hidden="true"></i>
+								<select aria-required="true" id="quote-cargo" name="book_online_detail[time_slot]" class="choice form-control">
+									<option value="" selected data-default>Preffered Time Slot</option>
+									<option value="type1">Type 1</option>
+									<option value="type2">Type 2</option>
+									<option value="type3">Type 3</option>
+									<option value="type4">Type 4</option>
+								</select>
+								<i class="rt-icon2-chevron-thin-down"></i>
+							</div>
+						</div>
+
+						<div class="bottommargin_10">
+							<label for="quote-cargo" class="sr-only">Number of Bedrooms</label>
+							<div class="input-group select-group">
+								<i class="fa fa-home" aria-hidden="true"></i>
+								<select aria-required="true" id="quote-cargo" name="book_online_detail[number_of_bedrooms]" class="choice form-control">
+									<option value="" selected data-default>Number of Bedrooms</option>
+									<option value="type1">Type 1</option>
+									<option value="type2">Type 2</option>
+									<option value="type3">Type 3</option>
+									<option value="type4">Type 4</option>
+								</select>
+								<i class="rt-icon2-chevron-thin-down"></i>
+							</div>
+						</div>
+
+						<div class="bottommargin_10">
+							<label for="quote-cargo" class="sr-only">Size of Truck</label>
+							<div class="input-group select-group">
+								<i class="fa fa-truck" aria-hidden="true"></i>
+								<select aria-required="true" id="quote-cargo" name="book_online_detail[size_of_truck]" class="choice form-control">
+									<option value="" selected data-default>Size of Truck</option>
+									<option value="type1">Type 1</option>
+									<option value="type2">Type 2</option>
+									<option value="type3">Type 3</option>
+									<option value="type4">Type 4</option>
+								</select>
+								<i class="rt-icon2-chevron-thin-down"></i>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col-sm-12 text-center">
+						<div class="framed-heading">
+							<h2 class="section_header"style="font-size: 35px; color: #273754;">
+								Terms and Conditions
+							</h2>
+						</div>
+						<p style="text-align:left">
+							* Minimum of 2hrs payment required on Online Booking.<br>
+							* $10 charged separately for each flight of stairs.<br>
+							* $100 charged seaparately for Upright Piano, if any(ground floor to ground floor).<br>
+							* No cacellation fee applicable, if informed 24hours prior to booked date.<br>
+							<input type="checkbox">I have read and Agree to the Terms & Conditions.
+
+ 
+						</p>
+					</div>
+
+
+					<div class="col-sm-12 text-center">
+						<button type="submit" id="quote_submit" name="quote_submit" class="theme_button color2 topmargin_10">Submit and Pay</button>
+					</div>
+				<%end%>
+
+			</div>
+		</div>
+	</div>
+</section>

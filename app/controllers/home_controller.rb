@@ -78,6 +78,10 @@ class HomeController < ApplicationController
   def why_us
   end
 
+  def book_online_detail
+    @book_online=BookOnlineDetail.new
+  end
+
   def call_me_back
     admin_message = "You have got a request for call back from " + params[:name] + "(" + params[:phone_number] + ")" + 
     client_message = "Hi" + params[:name] + "Your call request has been sent to MoveCo. You will reciever a call shortly." 
