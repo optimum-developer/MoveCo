@@ -18,6 +18,9 @@ class RequestQuotesController < ApplicationController
      end
   	end
 
+    def new
+        @new_req=RequestQuote.new
+    end
 
 
   	private

@@ -3573,7 +3573,7 @@ body.boxed {
 
 .ls .theme_button.inverse:hover {
 	color: #ffffff;
-	background-color: #1d3052;
+	background-color: #f69323;
 }
 
 .ls .color-icon.bg-icon {
@@ -4571,6 +4571,10 @@ body.boxed {
 	.teasers-line > * + * {
 		margin-left: 36px;
 	}
+}
+
+.feature_list{
+	text-align: -webkit-auto;
 }
 
 .header_white {
@@ -9402,8 +9406,12 @@ a.teaser-link:hover .teaser_icon i {
 	margin: 0;
 	padding: 15px 30px 80px;
 	list-style: none;
+	padding: 4%;
 }
 
+.price_main_div{
+	margin-right: 1%;
+}
 .price-table-image {
 	position: relative;
 	margin: 0;
@@ -9450,7 +9458,8 @@ a.teaser-link:hover .teaser_icon i {
 }
 
 .plan-name h3 {
-	font-size: 18px;
+	font-size: 21px;
+	padding-bottom: 4%;
 	font-weight: 800;
 	text-transform: uppercase;
 	margin: 0;
@@ -9465,9 +9474,10 @@ a.teaser-link:hover .teaser_icon i {
 
 .plan-price {
 	position: relative;
-	font-size: 18px;
+	font-size: 21px;
 	font-weight: 800;
 	line-height: 1;
+	color: #f59223;
   /* dollar sign */
 }
 

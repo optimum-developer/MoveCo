@@ -20,7 +20,7 @@
 
 				
 
-				<%= form_for @book_online, :html => {class: 'quote-form row topmargin_40'} do |f| %>
+				<%= form_for @book_online, :html => {class: 'quote-form row topmargin_40', id:"book_online"} do |f| %>
 
 
 					<div class="col-sm-6">
@@ -185,7 +185,10 @@
 							* $10 charged separately for each flight of stairs.<br>
 							* $100 charged seaparately for Upright Piano, if any(ground floor to ground floor).<br>
 							* No cacellation fee applicable, if informed 24hours prior to booked date.<br>
-							<input type="checkbox">I have read and Agree to the Terms & Conditions.
+							<input id="terms_and_condition" type="checkbox">
+							<span style="padding-left: 20px;">
+							I have read and Agree to the Terms & Conditions.
+							</span>
 
  
 						</p>
@@ -193,7 +196,7 @@
 
 
 					<div class="col-sm-12 text-center">
-						<button type="submit" id="quote_submit" name="quote_submit" class="theme_button color2 topmargin_10">Submit and Pay</button>
+						<button onclick="submit_form()" type="button" id="quote_submit" name="quote_submit" class="theme_button color2 topmargin_10">Submit and Pay</button>
 					</div>
 				<%end%>
 
@@ -201,3 +204,16 @@
 		</div>
 	</div>
 </section>
+<script type="text/javascript">
+	function submit_form()
+	{
+		
+        if (!$('#terms_and_condition').is(':checked')) {
+            alert("Please accept terms and conditions");
+        }
+        else
+        {
+        	$("#book_online").submit();
+        }
+	}
+</script>
