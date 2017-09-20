@@ -137,19 +137,20 @@
 						</a>
 					</div>
 					<div class="col-sm-8 col-lg-9 text-center text-sm-right teasers-line">
-						
-						
-						<a class="media inline-block small-teaser text-left teaser-link hidden-xs hidden-sm" href="<%%>">
-							<span class="media-left media-middle">
-								<span class="teaser_icon border_icon round">
-									<i class="fa fa-phone grey bold"></i>
-								</span>
-							</span>
-							<span class="media-body media-middle semibold">
-								<span class="bold grey">Request a call back</span>
-								<br> 
-							</span>
-						</a>
+					<form name="" action="<%=home_call_me_back_path%>" method="post" class=" form-inline wpcf7-form" novalidate="novalidate">
+						<div style="display: none;">
+						<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+						</div>
+						<div class="form-group">
+							<div class="input-group">
+								<i class="fa fa-phone highlight" style="margin-top: 3%;"></i>
+								<input type="number" aria-required="true" size="30" value="" name="phone_number" id="phone_number" class="form-control" placeholder="Add your number" required>
+							</div>
+						</div>
+						<input type="submit" value="Request a call back" class="theme_button"><img class="ajax-loader" src="http://www.melbournespeediemovers.com.au/wp-content/plugins/contact-form-7/images/ajax-loader.gif" alt="Sending ..." style="visibility: hidden;">
+					</form>
+						<!--  -->
+
 						<div>
 							<a href="#" class="social-icon border-icon rounded-icon theme-color2-icon soc-facebook"></a>
 							<a href="#" class="social-icon border-icon rounded-icon theme-color2-icon soc-twitter"></a>
