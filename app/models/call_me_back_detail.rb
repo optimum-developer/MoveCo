@@ -1,0 +1,2 @@
+class CallMeBackDetail < ApplicationRecord
+end

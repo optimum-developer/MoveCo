@@ -10,7 +10,7 @@
 <title>MoveCo</title>
 <meta charset="utf-8">
 <!--[if IE]>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <![endif]-->
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,9 +24,9 @@
 <script src="/assets/vendor/modernizr-2.6.2.min.js"></script>
 
 <!--[if lt IE 9]>
-	<script src="/assets/vendor/html5shiv.min.js"></script>
-	<script src="/assets/vendor/respond.min.js"></script>
-	<script src="/assets/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/vendor/html5shiv.min.js"></script>
+    <script src="/assets/vendor/respond.min.js"></script>
+    <script src="/assets/vendor/jquery-1.12.4.min.js"></script>
 <![endif]-->
 
 </head>
@@ -116,7 +116,7 @@
 				<span class="header_title col-sm-3" style="padding-left: 135px;">1300-EAGLE MOVERS</span>
 				<!-- <i class="fa fa-envelope col-sm-2 top_icons" style="    float: right; margin-right: 4%;"></i> -->
 				<!--  -->
-				<a class="" href="mailto:your@mail.com" " 
+				<a class="" href="mailto:your@mail.com"
 					<span class="media-left media-middle">
 						<span class="teaser_icon border_icon round">
 							<i style="padding-left: 210px; margin-top: -10px;" class="fa fa-envelope col-sm-2 top_icons"></i>
@@ -137,7 +137,7 @@
 						</a>
 					</div>
 					<div class="col-sm-8 col-lg-9 text-center text-sm-right teasers-line">
-					<form name="" action="<%=home_call_me_back_path%>" method="post" class=" form-inline wpcf7-form" novalidate="novalidate">
+					<form name="" action="<%=home_call_me_back_path%>" method="post" class=" form-inline wpcf7-form"  id="call_me_back">
 						<div style="display: none;">
 						<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 						</div>
@@ -147,8 +147,11 @@
 								<input type="number" aria-required="true" size="30" value="" name="phone_number" id="phone_number" class="form-control" placeholder="Add your number" required>
 							</div>
 						</div>
-						<input type="submit" value="Request a call back" class="theme_button"><img class="ajax-loader" src="http://www.melbournespeediemovers.com.au/wp-content/plugins/contact-form-7/images/ajax-loader.gif" alt="Sending ..." style="visibility: hidden;">
+						<input type="submit" onclick="call_me_back_details()" value="Request a call back" class="theme_button"><img class="ajax-loader" src="http://www.melbournespeediemovers.com.au/wp-content/plugins/contact-form-7/images/ajax-loader.gif" alt="Sending ..." style="visibility: hidden;">
 					</form>
+
+
+					
 						<!--  -->
 
 						<div>
@@ -438,6 +441,46 @@
 
 	<script src="/assets/compressed.js"></script>
 	<script src="/assets/main.js"></script>
+    <script src="/assets/notify.js"></script>
+    
+
+
+	<script type="text/javascript">
+
+		function call_me_back_details() {
+			if($("#phone_number").val!=""){
+			// alert("wewhgyfg")
+		    	$.ajax({
+
+		                type: "POST",
+		                dataType: 'json',
+		                url: 'home/call_me_back',
+		                data: $("#call_me_back").serialize(),
+
+		                success: function(data) {
+		                	if(data["notice_status"]=="true"){
+								$.notify("Thanks for contacting us. We will contact you shortly.", "success");                                    
+		                		$("#phone_number").val("")
+		                	}
+
+		                	else{
+		                		$.notify("Something Went Wrong! Please Try Again");
+
+		                	}
+		                	
+		                },
+		                error: function(err){
+		                	$.notify("Something Went Wrong! Please Try Again");
+		                }
+
+		                })
+		    }
+
+		}
+
+</script>
+	
+
 
 
 </body>

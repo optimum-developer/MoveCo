@@ -28,7 +28,7 @@
 				</label>
 				<div class="input-group">
 					<i class="flaticon-phone-call highlight"></i>
-					<input type="text" aria-required="true" size="30" value="" name="request_quote[phone_number]" id="quote-phone" class="form-control" placeholder="Phone" required>
+					<input type="number" aria-required="true" size="30" value="" name="request_quote[phone_number]" id="quote-phone" class="form-control" placeholder="Phone" required>
 				</div>
 			</div>
 			<div class="form-group">
@@ -71,14 +71,47 @@
 				</label>
 				<div class="input-group">
 					<i class="flaticon-edit highlight"></i>
-					<textarea aria-required="true" rows="5" cols="45" name="request_quote[description]" id="quote-description" class="form-control" placeholder="Description"></textarea>
+					<textarea aria-required="true" rows="5" cols="45" name="request_quote[description]" id="quote-description" class="form-control" placeholder="Description" ></textarea>
 				</div>
 			</div>
 
 			<div class="text-center topmargin_40">
-				<button type="submit" id="quote_submit" name="quote_submit" class="theme_button color2">Send request</button>
+				<button type="submit" onclick="save_quote_request()" id="quote_submit" name="quote_submit" class="theme_button color2">Send request</button>
 			</div>
 		
 
 	</div>
 <%end%>
+<script type="text/javascript">
+	function save_quote_request() {
+		// alert("wewhgyfg")
+    	$.ajax({
+                type: "POST",
+                dataType: 'json',
+                headers: {
+    				'X-CSRF-Token': '<%= form_authenticity_token.to_s %>'
+  				},
+                url: '<%=request_quotes_path%>',
+                data: $("#new_request_quote").serialize(),
+
+                success: function(data) {
+                	if (data["status_notify"]=="true"){
+						$.notify("Thanks for contacting us. We will contact you shortly.", "success");                                    
+						$("#new_request_quote").trigger('reset');
+					}
+
+                },
+                error: function(err){
+	                	$.notify("Something Went Wrong! Please Try Again");
+							                                    
+					                                     
+                	
+                }
+
+                })
+
+	}
+	
+
+</script>
+

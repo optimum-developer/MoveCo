@@ -78,11 +78,17 @@ class HomeController < ApplicationController
   def why_us
   end
 
+  # def tryit
+    
+  #    # render :layout => false
+  # end
+
   def book_online_detail
     @book_online=BookOnlineDetail.new
   end
 
   def call_me_back
+    CallMeBackDetail.create(:phone_number=>params["phone_number"])
     admin_message = "You have got a request for call back from " + params[:phone_number]  
     client_message = "Hi Your call request has been sent to MoveCo. You will reciever a call shortly." 
     account_sid = 'ACb0f41764355db14c3a603052c904b64a'
@@ -104,10 +110,28 @@ class HomeController < ApplicationController
           :body => admin_message,
           :media_url => 'https://climacons.herokuapp.com/clear.png'
         })
-        redirect_to root_path
-        rescue => e
-          redirect_to root_path
+        
+
+        respond_to do |format|
+            format.html {  }
+            format.json { render :json =>{status: 200,notice_status:"true"}  }
+
         end
+
+        rescue => e
+          respond_to do |format|
+            format.html {  }
+            format.json { render :json =>{status: 200,notice_status:"false"}  }
+
+        end
+
+        end
+
+        
   end
+
+
+
+
 
 end
