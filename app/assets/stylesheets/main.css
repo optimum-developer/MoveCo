@@ -4531,6 +4531,17 @@ body.boxed {
 	padding: 9px 9px 8px;
 }
 
+.logo_div{
+	background: #273754;
+    border: 3px solid #e08c2c;
+    height: 55px;
+    border-radius: 15px;
+}
+
+.logo_font{
+	font-family: eras medium itc;
+}
+
 .page_toplogo a.social-icon {
 	margin-bottom: 0;
 }
@@ -12635,4 +12646,6 @@ tr.item-editable .media-left img {
 		display: inline-block;
 		margin-bottom: 10px;
 	}
+
+
 }
