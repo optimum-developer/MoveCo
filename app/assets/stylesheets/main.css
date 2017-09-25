@@ -4578,14 +4578,29 @@ body.boxed {
 }
 
 .logo_div{
-	background: #273754;
+	background: #394966;
     border: 3px solid #e08c2c;
-    height: 55px;
     border-radius: 15px;
+    padding: 3%;
+    padding-left: 4%;
 }
 
 .logo_font{
 	font-family: eras medium itc;
+	font-size: 37px;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 500px) {
+    .logo_font {
+        font-size: 27px;
+    }
+}
+
+.top_strip_elmt{
+	color: white;
+	margin: 0;
+    text-align: center;
 }
 
 .page_toplogo a.social-icon {

@@ -42,7 +42,7 @@
 
 	}
 	.header_div{
-		background-color: #273754;
+		background-color: #394966;
 	    border-bottom: 2px solid black;
     	border-top: 2px solid black;
 	}
@@ -55,10 +55,10 @@
 		transform: rotate(105deg);
 	}
 	.logo_bottom{
-	    padding-left: 19%;
+		float: right;
 	    font-weight: 600;
-	    font-size: 23px;
-	    color: #273754;
+	    font-size: 19px;
+	    color: #394966;
 	}
 </style>
 <body style="padding-right: 0">
@@ -109,60 +109,59 @@
 		<!-- template sections -->
 
 		<section class="page_toplogo table_section ls mainpge_toplogo section_padding_25">
-		<div class="header_div">
-			<div class="row">
-				<span class="header_title col-sm-5">EAGLE MOVING AND STORAGE</span>
-				<i class="fa fa-phone col-sm-2 top_icons phone_icon fa-rotate-45"></i>
-				<span class="header_title col-sm-3" style="padding-left: 135px;">1300-EAGLE MOVERS</span>
-				<!-- <i class="fa fa-envelope col-sm-2 top_icons" style="    float: right; margin-right: 4%;"></i> -->
-				<!--  -->
-				<a class="" href="mailto:your@mail.com"
-					<span class="media-left media-middle">
-						<span class="teaser_icon border_icon round">
-							<i style="padding-left: 210px; margin-top: -10px;" class="fa fa-envelope col-sm-2 top_icons"></i>
-						</span>
-					</span>
-				</a>
-				<!--  -->
-			</div>
-
-				
-		</div>
-			<div class="container">
+			<div class="header_div">
 				<div class="row">
-					<div class="col-sm-4 col-lg-3 text-center text-sm-left logo_div">
-						<a class="logo eagle_logo">
-						<b class="logo_font" style="color: #f59223;">1300 </b><b class="logo_font" style="color: white;">EAGLE </b><b class="logo_font" style="color: white;">MOVERS </b>
-							<!-- <img src="/assets/logo.png" alt=""> -->
+					<div class="col-sm-3 top_strip_elmt" style="padding-left: 5%;">info@eaglemover.com.au</div>
+					<div class="col-sm-3 top_strip_elmt">
+						<img src="/assets/telephone _icon.png">
+					</div>
+							
+					<div class="col-sm-3 top_strip_elmt">1300-EAGLE MOVERS</div>
+					<div class="col-sm-3 top_strip_elmt">
+						<a class="" href="mailto:info@eaglemover.com.au">
+							<img src="/assets/mail-black-envelope-symbol (1).png">
 						</a>
 					</div>
-					<div class="col-sm-8 col-lg-9 text-center text-sm-right teasers-line">
-					<form name="" action="<%=home_call_me_back_path%>" method="post" class=" form-inline wpcf7-form"  id="call_me_back">
-						<div style="display: none;">
-						<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-						</div>
-						<div class="form-group">
-							<div class="input-group">
-								<i class="fa fa-phone highlight" style="margin-top: 3%;"></i>
-								<input type="number" aria-required="true" size="30" value="" name="phone_number" id="phone_number" class="form-control" placeholder="Add your number" required>
-							</div>
-						</div>
-						<input type="submit" onclick="call_me_back_details()" value="Request a call back" class="theme_button"><img class="ajax-loader" src="http://www.melbournespeediemovers.com.au/wp-content/plugins/contact-form-7/images/ajax-loader.gif" alt="Sending ..." style="visibility: hidden;">
-					</form>
-
-
-					
-						<!--  -->
-
-						<div>
-							<a href="#" class="social-icon border-icon rounded-icon theme-color2-icon soc-facebook"></a>
-							<a href="#" class="social-icon border-icon rounded-icon theme-color2-icon soc-twitter"></a>
-							<a href="#" class="social-icon border-icon rounded-icon theme-color2-icon soc-google"></a>
-						</div>
-					</div>
+				</div>
+			</div>
+		<!-- logo demo starts-->
+		<div class="row" style="padding-top: 1%;">
+			<div class="col-sm-6 col-lg-5" style="padding-right: 4%;
+    padding-left: 7%;">
+				<div class="logo_div logo_font">
+					<a class="">
+						<span style="color: #f59223;">1300 </span>
+						<span style="color: white;">EAGLE </span>
+						<span style="color: white;">MOVERS </span>
+					</a>
 				</div>
 				<div class="logo_bottom logo_font">moving & storage</div>
 			</div>
+			<div class="col-sm-6 col-lg-7 text-center text-sm-right teasers-line" style="    padding-right: 6%;">
+				<form name="" action="<%=home_call_me_back_path%>" method="post" class=" form-inline wpcf7-form"  id="call_me_back">
+					<div style="display: none;">
+					<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+					</div>
+					<div class="form-group">
+						<div class="input-group">
+							<i class="fa fa-phone highlight" style="margin-top: 3%;"></i>
+							<input type="number" aria-required="true" size="30" value="" name="phone_number" id="phone_number" class="form-control" placeholder="Add your number" required>
+						</div>
+					</div>
+					<input type="submit" onclick="call_me_back_details()" value="Request a call back" style="background-color: #394966;" class="theme_button"><img class="ajax-loader" src="http://www.melbournespeediemovers.com.au/wp-content/plugins/contact-form-7/images/ajax-loader.gif" alt="Sending ..." style="visibility: hidden;">
+				</form>
+				<div>
+					<a href="#" class="social-icon border-icon rounded-icon theme-color2-icon soc-facebook"></a>
+					<a href="#" class="social-icon border-icon rounded-icon theme-color2-icon soc-twitter"></a>
+					<a href="#" class="social-icon border-icon rounded-icon theme-color2-icon soc-google"></a>
+				</div>
+			</div>
+		</div>
+		
+		<!-- logo demo ends -->
+		<!--  -->
+	
+			<!--  -->
 		</section>
 
 		<header class="page_header header_darkgrey ms toggle_menu_left">
@@ -179,8 +178,8 @@
 									<a  href="<%=home_about_us_path%>">About Us</a>
 								</li>
 
-								<li>
-									<a href="<%=home_service_path%>">Services</a>
+								<li id="home_page_services" class="home_page_services">
+									<a href="#">Services</a>
 									<ul>
 										
 										
@@ -211,7 +210,7 @@
 									</ul>
 								</li>
 
-								<li>
+								<li id="home_page_why_us" class="home_page_why_us">
 									<a href="<%=home_why_us_path%>">Why Us</a>
 								</li>
 
@@ -349,7 +348,7 @@
 								<!-- eof Gallery -->
 
 								<!-- contacts -->
-								<li id="home_page_pricing" >
+								<li id="home_page_pricing" class="home_page_pricing">
 									<a href="<%=home_pricing_path%>">Pricing</a>
 								</li>
 
