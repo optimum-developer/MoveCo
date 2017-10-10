@@ -16,10 +16,10 @@ post-9 img {
 }
 </style>
 <script type="text/javascript">
-	document.getElementById("home_page_about_us").className = "active";
+	document.getElementById("home_page_services").className = "active service_underline";
 	document.getElementById("home_page_link").className = "";
 </script>
-<div id="main" class="site-main container">
+<div id="main" class="site-main container content_font_color">
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 			<h2>Residential Moving</h2>
@@ -27,10 +27,10 @@ post-9 img {
 				<div class="entry-content">
 					    <p><img style="float:left; padding-right:30px;"src="/assets/residential.jpg" alt="Residential Moving" title="Residential Moving" >
 						<strong>Planning to move your house? </strong><br /> 
-						Do not worry, <b><a href="http://www.melbournespeediemovers.com.au/about-us/">Melbourne Speedie Movers</a></b> will take the onus of all your belongings and shifting them in pristine condition.<br />
-						<strong>Melbourne Speedie Movers provide</strong> you with the utmost technical equipment and experienced staff which will ensure quality work round the clock. <b><a href="http://www.melbournespeediemovers.com.au/services/secure-storage/">Household shifting</a></b> involves shifting of fragile and important items such as glass items, paintings, electronic equipment, TV, refrigerator, microwave etc. All the items are packed in cuboid cardboard boxes along with bubble wrapping, so as to prevent damage of fragile items.<br />
-						Our primary and priority goal is <b><a href="http://www.melbournespeediemovers.com.au/why-us/">customer satisfaction</a></b> and their trust. We believe in maintaining a healthy and friendly relation with the <b><a href="http://www.melbournespeediemovers.com.au/contact-us/">customer</a></b> for the purpose. Keeping that in mind, we do not forget the value of professionalism at any time.<br />
-						Apart from that, we have <b><a href="http://www.melbournespeediemovers.com.au/charges/">trucks</a></b> of all sizes to <b><a href="http://www.melbournespeediemovers.com.au/contact-us/">meet your demands</a></b> which can accommodate almost every range of houses.
+						Do not worry, <b><a href="<%=home_about_us_path%>">1300 eagle movers</a></b> will take the onus of all your belongings and shifting them in pristine condition.<br />
+						<strong>1300 eagle movers provide</strong> you with the utmost technical equipment and experienced staff which will ensure quality work round the clock. <b><a href="<%=home_service_secure_storage_moving_path%>">Household shifting</a></b> involves shifting of fragile and important items such as glass items, paintings, electronic equipment, TV, refrigerator, microwave etc. All the items are packed in cuboid cardboard boxes along with bubble wrapping, so as to prevent damage of fragile items.<br />
+						Our primary and priority goal is <b><a href="<%=home_why_us_path%>">customer satisfaction</a></b> and their trust. We believe in maintaining a healthy and friendly relation with the <b><a href="<%=home_why_us_path%>">customer</a></b> for the purpose. Keeping that in mind, we do not forget the value of professionalism at any time.<br />
+						Apart from that, we have <b><a href="<%=home_pricing_path%>">trucks</a></b> of all sizes to <b><a href="<%=home_contact_path%>">meet your demands</a></b> which can accommodate almost every range of houses.
 					</p>
 				</div><!-- .entry-content -->
 
@@ -42,4 +42,4 @@ post-9 img {
 		</div><!-- #content -->
     </div><!-- #primary -->
 </div><!-- #main -->
-<%=render partial:"buttons_booknow_quickquote"%>
+<%=render partial:"quotes_and_pricing_buttons"%>

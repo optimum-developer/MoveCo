@@ -12,19 +12,24 @@
 	document.getElementById("home_page_link").className = "";
 	document.getElementById("home_page_about_us").className = "";
 	
+	window.onload = function(){
+	  <%if flash[:notice].present?%>
+		$.notify("Thanks for your valuable feedback", "success");
+	  <%end%>
+	};
+	window.setTimeout(function() {
+      }, 0);
 </script>
-<div class="container">
+<div class="container content_font_color" style="padding-bottom: 4%;">
 	<div id="main" class="site-main">
 		<div id="primary" class="content-area">
 			<div id="content" class="site-content" role="main">
 					<h2>Contact Us</h2>
 						<article id="post-24" class="post-24 page type-page status-publish hentry">
 						<div class="entry-content">
-							<div class="tl" style="line-height: 60px;font-size: 16px;margin-top: 14px;float: left;"><strong>Melbourne Speedie Movers</strong> <br />
-							5 Arran close epping-3076 <br />
-							Victoria Australia. <br />
-							Email ID : melbournespeediemovers@gmail.com<br />
-							Phone No : 0422621651, 0432145262</p>
+							<div class="tl" style="line-height: 60px;font-size: 16px;margin-top: 14px;float: left;"><strong>1300 EAGLE MOVERS</strong> <br />
+							Email Id: info@eaglemovers.com.au<br />
+							Phone No :  1300 324 536</p>
 							<p><img style="  margin-top: 12px; max-width: 100%;" src="http://www.melbournespeediemovers.com.au/wp-content/uploads/2015/06/cnt.jpg" alt="" /></p>
 							</div>
 							
@@ -79,13 +84,13 @@
 							<div class="wpcf7-response-output wpcf7-display-none"></div>
 							<%end%>
 						</div></div>
-							<div class="tb col-md-12" style="padding-bottom: 75px;">
-							<h4>Locate Us On Map</h4>
-							<p><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3159.0074751970346!2d145.061086!3d-37.6490283!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6495aae3b3ad5%3A0x3cd9986f0cf6d995!2sMelbourne+Speedie+Movers!5e0!3m2!1sen!2sau!4v1439446608999" width="99.5%" height="450" frameborder="0" style="border:0"></iframe></div>
-
+							
 							</article><!-- #post -->
 	
 			</div><!-- #content -->
         </div><!-- #primary -->
 	</div><!-- #main -->
 </div>
+<script type="text/javascript">
+	
+</script>

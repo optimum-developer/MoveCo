@@ -16,10 +16,10 @@ post-9 img {
 }
 </style>
 <script type="text/javascript">
-	document.getElementById("home_page_about_us").className = "active";
+	document.getElementById("home_page_services").className = "active service_underline";
 	document.getElementById("home_page_link").className = "";
 </script>
-<div id="main" class="site-main container">
+<div id="main" class="site-main container content_font_color">
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 			<h2>Warehouse and Storage Facility</h2>
@@ -27,7 +27,8 @@ post-9 img {
 				<div class="entry-content">
 					<p>
 						<img style="float:left; padding-right:30px;" src="/assets/Secure-Storage.gif" alt="Warehouse and Storage Facility" title="Warehouse and Storage Facility"  >
-						<b><a href="http://www.melbournespeediemovers.com.au/">Melbourne Speedie Movers</a></b> offer storage and in-transit <b><a href="http://www.melbournespeediemovers.com.au/services/residential-moving/">warehousing facilities</a></b> for House Hold Goods, <b><a href="http://www.melbournespeediemovers.com.au/services/furniture-moving/">Furniture</a></b>, Industrial Goods &#038; automobiles. Goods can be stored for short or long time at our spacious warehouses which are divided into different sections for varied materials. Our warehouses are modern which are equipped with standard racking, are clean and are well-marked under appropriate tagging system. Warehouses are also equipped with sufficient protection arrangements for <b><a href="http://www.melbournespeediemovers.com.au/contact-us/">client&#8217;s valued inventory</a></b>. The warehousing facility includes multiple loading docks with sample space for staging of materials for receiving and shipping. All the goods entering the warehouse are appropriately checked under stringent inspection standards and are stored under hygienic environmental conditions.</p>
+						<b><a href="<%=root_path%>">1300 eagle movers</a></b> offer storage and in-transit <b><a href="<%=home_service_residential_moving_path%>">warehousing facilities</a></b> for House Hold Goods, <b><a href="<%=home_service_furniture_moving_path%>">Furniture</a></b>, Industrial Goods &#038; automobiles. Goods can be stored for short or long time at our spacious warehouses which are divided into different sections for varied materials. Our warehouses are modern which are equipped with standard racking, are clean and are well-marked under appropriate tagging system. Warehouses are also equipped with sufficient protection arrangements for <b><a href="<%=home_contact_path%>">client&#8217;s valued inventory</a></b>. The warehousing facility includes multiple loading docks with sample space for staging of materials for receiving and shipping. All the goods entering the warehouse are appropriately checked under stringent inspection standards and are stored under hygienic environmental conditions.
+						Call us for further details.</p>
 						
 					</p>
 				</div><!-- .entry-content -->
@@ -40,6 +41,6 @@ post-9 img {
 		</div><!-- #content -->
     </div><!-- #primary -->
 </div><!-- #main -->
-<%=render partial:"buttons_booknow_quickquote"%>
+<%=render partial:"quote_button_call_us"%>
 
 	

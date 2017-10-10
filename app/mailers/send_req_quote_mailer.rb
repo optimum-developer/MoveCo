@@ -1,9 +1,9 @@
 class SendReqQuoteMailer < ApplicationMailer
-  	default from: 'amandeep@codegarge.com'
+  	default from: 'info@eaglemovers.com.au'
 	
 	def send_quote_to_user(user_email,subject,req_name)
 		@u_name=req_name
-		mail(:to=>user_email,:subject=>"Request Confirmation")
+		mail(:to=>user_email,:subject=>"Request Confirmation", :body => "Request Confirmation")
 	end
 
 	def send_quote_to_admin(user_email,description,req_name,req_date_to_move,req_phone_number,req_move_from,req_move_to)
@@ -15,7 +15,7 @@ class SendReqQuoteMailer < ApplicationMailer
 		@u_move_to=req_move_to
 		@u_phone=req_phone_number
 
-		mail(:to=>"birparam95@gmail.com",:subject=>"Request Confirmation")
+		mail(:to=>"info@eaglemovers.com.au",:subject=>"Request Confirmation", :body=>"request send")
 	end
 
 	def send_contact_response(email,name)
@@ -27,7 +27,7 @@ class SendReqQuoteMailer < ApplicationMailer
 		@email=email
 		@u_name=name
 		@msg=message
-		mail(:to=>"birparam95@gmail.com",:subject=>subject)
+		mail(:to=>"info@eaglemovers.com.au",:subject=>subject)
 
 	end
 

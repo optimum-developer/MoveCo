@@ -16,10 +16,10 @@ post-9 img {
 }
 </style>
 <script type="text/javascript">
-	document.getElementById("home_page_about_us").className = "active";
+	document.getElementById("home_page_services").className = "active service_underline";
 	document.getElementById("home_page_link").className = "";
 </script>
-<div id="main" class="site-main container">
+<div id="main" class="site-main container content_font_color">
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 			<h2>Interstate Moving</h2>
@@ -28,7 +28,9 @@ post-9 img {
 					<p>
 						<img src="/assets/interstate-moving.jpg" alt="Interstate Moving" title="Interstate Moving" style="float:left; padding-right:30px;">
 						<strong>Looking for best Movers for interstate transport?</strong><br />
-                        Want to <b><a href="http://www.melbournespeediemovers.com.au/services/residential-moving/">move your house</a></b> from 1 state to another? Just tell us the destination, we will do the rest. We provide a simple and <b><a href="http://www.melbournespeediemovers.com.au/contact-us/">hassle free service</a></b>. From small set of items to bulk items, we transport all the goods in our variety of <b><a href="http://www.melbournespeediemovers.com.au/charges/">trucks</a></b>. Move the goods within Melbourne or outside Melbourne with ease. <b><a href="http://www.melbournespeediemovers.com.au/">Melbourne Speedie Movers</a></b> is the only secure and trusted platform which can provide you affordable interstate moving packages. Moreover, we are also insured making you more reliable on <b><a href="http://www.melbournespeediemovers.com.au/why-us/">our services</a></b>.</p>
+                        Want to <b><a href="<%=home_service_residential_moving_path%>">move your house</a></b> from 1 state to another? Just tell us the destination, we will do the rest. We provide a simple and <b><a href="<%=home_contact_path%>">hassle free service</a></b>. From small set of items to bulk items, we transport all the goods in our variety of <b><a href="<%=root_path%>">trucks</a></b>. Move the goods within Melbourne or outside Melbourne with ease. <b><a href="<%=root_path%>">1300 eagle movers</a></b> is the only secure and trusted platform which can provide you affordable interstate moving packages. Moreover, we are also insured making you more reliable on <b><a href="<%=home_why_us_path%>">our services</a></b>.<br/>
+                        Call us for further details.
+                        </p>
 					</p>
 				</div><!-- .entry-content -->
 
@@ -40,6 +42,6 @@ post-9 img {
 		</div><!-- #content -->
     </div><!-- #primary -->
 </div><!-- #main -->
-<%=render partial:"buttons_booknow_quickquote"%>
+<%=render partial:"quote_button_call_us"%>
 
 	

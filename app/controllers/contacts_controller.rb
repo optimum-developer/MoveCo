@@ -9,6 +9,7 @@ class ContactsController < ApplicationController
             SendReqQuoteMailer.send_msgsub_to_contact_admin(cont_email,cont_name,@new_contact_us.subject,@new_contact_us.message).deliver
 	 	    
         end
+        flash[:notice] = "Post successfully created"
         redirect_to home_contact_path
     end
 
