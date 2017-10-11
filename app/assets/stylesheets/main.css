@@ -4611,9 +4611,15 @@ body.boxed {
     }
 }
 
-@media only screen and (max-width: 767px) {
+/*@media only screen and (max-width: 767px) {
     .top_mail_icon {
         float: left;
+    }
+}*/
+
+@media only screen and (max-width: 767px) {
+    .top_media_icons_div {
+        text-align: center;
     }
 }
 

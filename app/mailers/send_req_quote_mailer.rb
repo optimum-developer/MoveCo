@@ -3,7 +3,7 @@ class SendReqQuoteMailer < ApplicationMailer
 	
 	def send_quote_to_user(user_email,subject,req_name)
 		@u_name=req_name
-		mail(:to=>user_email,:subject=>"Request Confirmation", :body => "Request Confirmation")
+		mail(:to=>user_email,:subject=>"QUICK QUOTE(1300 EAGLE MOVERS)", :body => "Hi,Thanks for requesting a Quick Quote from 1300 EAGLE MOVERS. We will be reverting soon with best offers for you. Thanks, Team 1300 EAGLE MOVERS.")
 	end
 
 	def send_quote_to_admin(user_email,description,req_name,req_date_to_move,req_phone_number,req_move_from,req_move_to)
@@ -15,7 +15,7 @@ class SendReqQuoteMailer < ApplicationMailer
 		@u_move_to=req_move_to
 		@u_phone=req_phone_number
 
-		mail(:to=>"info@eaglemovers.com.au",:subject=>"Request Confirmation", :body=>"request send")
+		mail(:to=>"gulsharn@codegaragetech.com",:subject=>"Request Confirmation", :body=>"request send")
 	end
 
 	def send_contact_response(email,name)
@@ -27,9 +27,12 @@ class SendReqQuoteMailer < ApplicationMailer
 		@email=email
 		@u_name=name
 		@msg=message
-		mail(:to=>"info@eaglemovers.com.au",:subject=>subject)
+		mail(:to=>"gulsharn@codegaragetech.com",:subject=>subject)
 
 	end
 
+	def booking_successful_to_user(user_email)
+		mail(:to=>user_email,:subject=>"Booking Successful(1300 EAGLE MOVERS)", :body => "Hi,Thanks for choosing 1300 EAGLE MOVERS. Your booking is Successful. Thanks, Team 1300 EAGLE MOVERS.")
+	end
 
 end

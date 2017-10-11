@@ -70,13 +70,22 @@ Rails.application.configure do
   # :authentication => :plain,
   # :enable_starttls_auto => true
   # }
+  # ActionMailer::Base.smtp_settings = {
+  #  :user_name => 'AmandeepkaurCG',
+  #  :password => 'sendgrid44aman',
+  #  :domain => 'http://www.melbournespeediemovers.com.au/',
+  #  :address => 'smtp.sendgrid.net',
+  #  :port => 587,
+  #  :authentication => :plain,
+  #  :enable_starttls_auto => true
+  # }
   ActionMailer::Base.smtp_settings = {
-   :user_name => 'AmandeepkaurCG',
-   :password => 'sendgrid44aman',
-   :domain => 'http://www.melbournespeediemovers.com.au/',
-   :address => 'smtp.sendgrid.net',
-   :port => 587,
-   :authentication => :plain,
-   :enable_starttls_auto => true
+  :user_name => 'farz.bhullar',
+  :password => '@Dd5t3ps!2016',
+  :domain => 'redchains.com',
+  :address => 'smtp.sendgrid.net',
+  :port => 587,
+  :authentication => :plain,
+  :enable_starttls_auto => true
   }
 end

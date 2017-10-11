@@ -5,8 +5,8 @@ class CreateBookOnlineDetails < ActiveRecord::Migration[5.1]
 	    t.string :last_name
 		t.string :email
 		t.datetime :date_to_move
-		t.integer :home_phone_number
-		t.integer :mobile_phone_number
+		t.string :home_phone_number
+		t.string :mobile_phone_number
 
 		# t.string :description
 		t.string :move_from
@@ -16,7 +16,7 @@ class CreateBookOnlineDetails < ActiveRecord::Migration[5.1]
 		t.integer :zipcode
 		t.datetime :time_slot
 		t.integer :number_of_bedrooms
-		t.float :size_of_truck
+		t.integer :size_of_truck
 
 
 

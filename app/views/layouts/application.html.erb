@@ -112,53 +112,58 @@
 			<div class="header_div">
 				<div class="row">
 					<!-- <div class="col-sm-3 top_strip_elmt" style="padding-left: 5%;">info@eaglemover.com.au</div> -->
-					<div class="col-sm-1 top_strip_elmt" style="text-align: left;">
+					<div class="col-md-1 col-sm-4 col-xs-2" style="text-align: left;">
 						<img src="/assets/telephone _icon.png">
 					</div>
 							
-					<div class="col-sm-4 top_strip_elmt">1300-EAGLE MOVERS</div>
-					<div class="col-sm-7 top_strip_elmt top_mail_icon" style="text-align: right;">
+					<div class="col-md-5 col-sm-4 col-xs-8 top_strip_elmt" style="margin-bottom: 10px; margin-top: 10px; ">1300-EAGLE MOVERS</div>
+					<div class="col-md-6 col-sm-3  col-xs-2 top_strip_elmt top_mail_icon" style="text-align: right;float: right; margin-bottom: 10px; margin-top: 10px;">
 						<a class="" href="mailto:info@eaglemover.com.au">
 							<img src="/assets/header_mail.png">
 						</a>
 					</div>
 				</div>
 			</div>
-		<!-- logo demo starts-->
-		<div class="row" style="padding-top: 1%;">
-			<div class="col-sm-6 col-lg-5" style="padding-right: 4%;
-    padding-left: 7%;">
-    
-    			<img src="/assets/logo_image.jpg">
-				<!-- <div class="logo_div logo_font">
-					<a class="">
-						<span style="color: #f59223;">1300 </span>
-						<span style="color: white;">EAGLE </span>
-						<span style="color: white;">MOVERS </span>
-					</a>
-				</div>
-				<div class="logo_bottom logo_font">moving & storage</div> -->
-			</div>
-			<div class="col-sm-6 col-lg-7 text-center text-sm-right teasers-line" style="    padding-right: 6%;">
-				<form name="" action="<%=home_call_me_back_path%>" method="post" class=" form-inline wpcf7-form"  id="call_me_back">
-					<div style="display: none;">
-					<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-					</div>
-					<div class="form-group">
-						<div class="input-group">
-							<i class="fa fa-phone highlight" style="margin-top: 3%;"></i>
-							<input type="number" aria-required="true" size="30" value="" name="phone_number" id="phone_number" class="form-control" placeholder="Add your number" required>
+			<!--  -->
+			 <div class="row" style="padding-top: 1%;">
+			    <div class="col-md-5" style="padding-right: 4%;  padding-left: 7%;" >
+			    	<img src="/assets/logo_image.jpg" style="width: 100%;">
+			    </div>
+			    <div class="col-md-5" >
+			    	<form name="" action="<%=home_call_me_back_path%>" method="post" class="row form-inline wpcf7-form""  id="call_me_back">
+				    	<div class="col-md-6" style="padding: 0; margin: 0;" >
+							<div style="display: none;">
+								<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+							</div>
+							<div class="form-group" style=" width: 100%">
+								<div class="input-group">
+									<i class="fa fa-phone highlight" style="    margin-top: 6px; color: #868686;z-index: 10;"></i>
+									<input type="number" aria-required="true" size="30" value="" name="phone_number" id="phone_number" class="form-control" placeholder="Add your number" style="width: 100%;    margin-bottom: 1%; font-size: 14px;" required>
+								</div>
+							</div>
+							<!-- <div class="row form-group">
+								<div class="col-md-6 input-group">
+									<i class="fa fa-phone highlight" style="margin-top: 8px;"></i>
+									<input type="number" aria-required="true" size="30" value="" name="phone_number" id="phone_number" class="" placeholder="Add your number" style=" width: 100%;padding-left: 20%;" required>
+								</div>
+							</div> -->
+				    	</div>
+				    	<div class="col-md-6" style="padding: 0" >
+							<input type="submit" onclick="call_me_back_details()" value="Request a call back" style="width: 100%; background-color: #394966;" class="">
 						</div>
+					</form>
+			    </div>
+			    <div class="col-md-2" style="padding: 0;text-align: center;">
+				    <div class="">
+						<a href="#" class="social-icon border-icon rounded-icon theme-color2-icon soc-facebook "></a>
+						<a href="#" class="social-icon border-icon rounded-icon theme-color2-icon soc-twitter"></a>
+						<a href="#" class="social-icon border-icon rounded-icon theme-color2-icon soc-google"></a>
 					</div>
-					<input type="submit" onclick="call_me_back_details()" value="Request a call back" style="background-color: #394966;" class="theme_button"><img class="ajax-loader" src="http://www.melbournespeediemovers.com.au/wp-content/plugins/contact-form-7/images/ajax-loader.gif" alt="Sending ..." style="visibility: hidden;">
-				</form>
-				<div>
-					<a href="#" class="social-icon border-icon rounded-icon theme-color2-icon soc-facebook"></a>
-					<a href="#" class="social-icon border-icon rounded-icon theme-color2-icon soc-twitter"></a>
-					<a href="#" class="social-icon border-icon rounded-icon theme-color2-icon soc-google"></a>
 				</div>
-			</div>
-		</div>
+    		</div>
+
+  <!--  -->
+		<!-- logo demo starts-->
 		
 		<!-- logo demo ends -->
 		<!--  -->
