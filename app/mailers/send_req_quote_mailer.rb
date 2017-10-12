@@ -15,7 +15,7 @@ class SendReqQuoteMailer < ApplicationMailer
 		@u_move_to=req_move_to
 		@u_phone=req_phone_number
 
-		mail(:to=>"gulsharn@codegaragetech.com",:subject=>"Request Confirmation", :body=>"request send")
+		mail(:to=>"info@eaglemovers.com.au",:subject=>"Request Confirmation", :body=>"request send")
 	end
 
 	def send_contact_response(email,name)
@@ -27,7 +27,7 @@ class SendReqQuoteMailer < ApplicationMailer
 		@email=email
 		@u_name=name
 		@msg=message
-		mail(:to=>"gulsharn@codegaragetech.com",:subject=>subject)
+		mail(:to=>"info@eaglemovers.com.au",:subject=>subject)
 
 	end
 
