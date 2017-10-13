@@ -323,14 +323,22 @@
 	<script type="text/javascript">
 
 		function call_me_back_details() {
-			if($("#phone_number").val!=""){
+			if($("#phone_number").val() !="" || $("#phone_number_2").val() !=""){
 			// alert("wewhgyfg")
+			if ($("#phone_number").val() !="")
+			{
+				form_data = $("#call_me_back").serialize();
+			}
+			else 
+			{
+				form_data = $("#call_me_back_2").serialize();
+			}
 		    	$.ajax({
 
 		                type: "POST",
 		                dataType: 'json',
 		                url: 'home/call_me_back',
-		                data: $("#call_me_back").serialize(),
+		                data: form_data,
 
 		                success: function(data) {
 		                	if(data["notice_status"]=="true"){
@@ -340,7 +348,7 @@
 
 		                	else{
 		                		$.notify("Something Went Wrong! Please Try Again");
-
+		                		$("#phone_number").val("")
 		                	}
 		                	
 		                },
