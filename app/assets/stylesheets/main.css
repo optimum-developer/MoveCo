@@ -2457,7 +2457,7 @@ body.boxed {
 }
 
 .with_grey_border{
-	border: 5px solid rgb(199, 199, 199);
+	border: 5px solid rgb(134, 134, 134)
 }
 
 .with_blue_border{
@@ -4611,6 +4611,11 @@ body.boxed {
     }
 }
 
+@media only screen and (max-width: 767px) {
+    .media_center_align {
+        text-align: center;
+    }
+}
 /*@media only screen and (max-width: 767px) {
     .top_mail_icon {
         float: left;
@@ -5737,7 +5742,7 @@ body.active-side-header.slide-right .page_header_side {
 }
 
 .page_breadcrumbs.parallax {
-	background-image: url(/assets/parallax/breadcrumbs1.jpg);
+	background-image: url(/assets/parallax/breadcrumbs19.jpg);
 }
 
 .page_testimonials {
@@ -9551,7 +9556,7 @@ a.teaser-link:hover .teaser_icon i {
 }
 
 .plan-name h3 {
-	font-size: 18px;
+	font-size: 23px;
 	font-weight: 800;
 	text-transform: uppercase;
 	margin: 0;
@@ -9566,7 +9571,7 @@ a.teaser-link:hover .teaser_icon i {
 
 .plan-price {
 	position: relative;
-	font-size: 18px;
+	font-size: 24px;
 	font-weight: 800;
 	line-height: 1;
   /* dollar sign */
@@ -9581,7 +9586,7 @@ a.teaser-link:hover .teaser_icon i {
 .price_contnt{
 	background-color: #2a3955;
     color: white;
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 .price_contnt_grey{

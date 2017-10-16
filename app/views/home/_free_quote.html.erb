@@ -1,23 +1,61 @@
 <section class="page_breadcrumbs template_breadcrumbs ds parallax">
 	<div class="container-fluid">
-		<div class="row">
+		<div class="row" style="background-image: url(assets/price-feature.jpg);">
 			<div class="breadcrumbs_wrap col-lg-5 col-md-7 col-sm-8 text-right to_animate" data-animation="fadeInLeftLong">
 				<div class="to_animate" data-animation="fadeInLeft" data-delay="500">
-					<h2>Free quote</h2>
+					<h2 id="heading_text">Free quote</h2>
 				</div>
 
 				<ol class="breadcrumb greylinks to_animate" data-animation="fadeInLeft" data-delay="400">
-					<li>
-						<a href="./">
-							Home
-						</a>
-					</li>
-					<li>
-						<a href="#">pages</a>
-					</li>
-					<li class="active">Free quote</li>
 				</ol>
 			</div>
 		</div>
 	</div>
 </section>
+<script type="text/javascript">
+	// if (window.location.pathname == "/home/plan_moving")
+	// {
+	// 	document.getElementById("heading_text").innerHTML = "Plan Moving";
+	// }
+
+	var text;
+	var page_url = window.location.pathname;
+	switch(page_url) {
+	    case "/home/plan_moving":
+	        text = "PLAN MOVING";
+	        break;
+	    case "/home/about_us":
+	        text = "ABOUT US";
+	        break;
+	    case "/home/service_residential_moving":
+	        text = "RESIDENTIAL MOVING";
+	        break;
+	    case "/home/service_office_moving":
+	        text = "OFFICE RELOCATION";
+	        break;
+	    case "/home/service_interstate_moving":
+	        text = "INTERSTATE MOVE";
+	        break;
+	    case "/home/service_packing_moving":
+	        text = "PACKING";
+	        break;
+	    case "/home/service_secure_storage_moving":
+	        text = "STORAGE AND WAREHOUSE";
+	        break;
+	    case "/home/service_packing_moving":
+	        text = "PACKING";
+	        break;
+	    case "/home/why_us":
+	        text = "WHY US";
+	        break;
+	    case "/home/pricing":
+	        text = "OUR PRICES";
+	        break;
+	    case "/home/contact":
+	        text = "CONTACT US";
+	        break;
+	    default:
+	        text = "PLAN MOVING";
+	}
+	document.getElementById("heading_text").innerHTML = text;
+</script>
