@@ -4627,10 +4627,30 @@ body.boxed {
         text-align: center;
     }
 }
-
+.book_white_button{
+		font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 14px 28px 15px;
+    margin-bottom: 4px;
+    line-height: 1.5;
+    display: inline-block;
+    text-align: center;
+    color: #ffffff;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 0px;
+    position: relative;
+    -webkit-transition: all 0.4s linear 0s;
+    transition: all 0.4s linear 0s;
+}
+.book_white_button:hover {
+   background-color: #1d3052;
+}
 .top_strip_elmt{
 	color: white;
 	margin: 0;
+	font-size: 12px;
 }
 
 .page_toplogo a.social-icon {
@@ -9552,11 +9572,11 @@ a.teaser-link:hover .teaser_icon i {
 }
 
 .plan-name {
-	padding: 30px 0;
+	padding: 24px 0;
 }
 
 .plan-name h3 {
-	font-size: 23px;
+	font-size: 22px;
 	font-weight: 800;
 	text-transform: uppercase;
 	margin: 0;
@@ -9571,10 +9591,10 @@ a.teaser-link:hover .teaser_icon i {
 
 .plan-price {
 	position: relative;
-	font-size: 24px;
+	font-size: 36px;
 	font-weight: 800;
 	line-height: 1;
-  /* dollar sign */
+  /* dollar sign */	
 }
 
 .features-list {
@@ -9586,7 +9606,7 @@ a.teaser-link:hover .teaser_icon i {
 .price_contnt{
 	background-color: #2a3955;
     color: white;
-    opacity: 0.7;
+    opacity: 0.9;
 }
 
 .price_contnt_grey{
@@ -9608,6 +9628,7 @@ a.teaser-link:hover .teaser_icon i {
 
 .no_list_style{
 	list-style: none;
+	line-height: 36px;
 }
 
 .features-list .disabled:before {
