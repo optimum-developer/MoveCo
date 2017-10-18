@@ -21,7 +21,7 @@ post-9 img {
 	document.getElementById("home_page_link").className = "";
 </script>
 <section class="ls section_padding_top_100 section_padding_bottom_75">
-	<div class="container">
+	<div class="container" style="padding-top: 70px;padding-bottom: 35px;">
 		<div class="row">
 			<div class="col-sm-12 text-center">
 				<div class="framed-heading bottommargin_15">
@@ -42,9 +42,14 @@ post-9 img {
 						<div class="entry-content">
 							<p>
 							<div class="col-md-5 col-sm-12">
-								<img src="/assets/ABOUT US.jpg" alt="Budget Movers in Melbourne" style="float: left" />
+								<div  class="col-md-12 col-sm-12">
+									<img src="/assets/ABOUT US.jpg" alt="Budget Movers in Melbourne" style="float: left; width: 100%;" />
+								</div>
+								<div class="col-md-12 col-sm-12 bottom_button_partial">
+									<%=render partial:"quotes_and_pricing_buttons"%>
+								</div>
 							</div>
-							<div class="col-md-7 col-sm-12">
+							<div class="col-md-7 col-sm-12 p_justify">
 							<p>
 							 1300 EAGLE MOVERS have taken the initiative to start the company in order to facilitate transport services for various needs. 1300 EAGLE MOVERS believe in the importance of operating as independent carriers, responding quickly to your needs with prompt, effective and global solutions. With us you deal with a single, global and highly specialized company which is able to provide the necessary answers to all your particular transport requirements. A comprehensive service wherein all the activities related to <b>moving and packing</b> are offered by us. The customer can pass on the entire responsibility to us.1300 EAGLE MOVERS have devised convenient and brilliant ways to move its customers’ <b>households</b> or vehicles anywhere within the territory. Our services are proficiently designed to meet the maximum <b>customer satisfaction</b>, and they are also rendered in such a way, so as to come out high on the expectations of our clients, time and again. As a service provider of the industry 1300 EAGLE MOVERS always take in mind that customers are our biggest asset and this glance make us enable to serve them with our services of <b>packaging and shifting</b> with extreme dedication for their satisfaction. So, as our customer, you can be totally assured of availing the safest and <b>faster services</b>, which are being executed at the right time, whereby ensuring that the goods get delivered to you in the intact condition.</p>
 							<p>Our dedicated and committed team puts heart and soul into the entire <b>packing and moving</b> process. Packing materials like tubular packing and high quality corrugated sheets are used to provide complete safeguard to your precious <b>household items</b> and protect against any kind of breakages during transition.<br/>
@@ -64,4 +69,3 @@ post-9 img {
 		</div><!-- #content -->
     </div><!-- #primary -->
 </div><!-- #main -->
-<%=render partial:"quotes_and_pricing_buttons"%>

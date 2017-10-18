@@ -21,7 +21,7 @@ post-9 img {
 	document.getElementById("home_page_link").className = "";
 </script>
 <section class="ls section_padding_top_100 section_padding_bottom_75">
-	<div class="container">
+	<div class="container" style="padding-top: 70px;padding-bottom: 35px;">
 		<div class="row">
 			<div class="col-sm-12 text-center">
 				<div class="framed-heading bottommargin_15">
@@ -40,11 +40,18 @@ post-9 img {
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 			<article id="post-9" class="post-9 page type-page status-publish hentry">
-				<div class="entry-content">
-					<p>
-						<img src="/assets/packing_service.jpg" alt="Packing &amp; Moving" title="Packing &amp; Moving" style="float:left; padding: 10px; width: 40%;" >
-						At <b>1300 eagle movers</b>, we provide efficient packing material that is reliable to face any situation and circumstances. Goods are packed in cuboid boxes with internal walls of bubble wrap to give extra care. For more fragile and delicate items we use eco- friendly, highly flexible fiber sheets. With due attention to minute details while packing processes, <b>our packing experts</b>, work tirelessly to make sure that the goods are perfectly packed and don&#8217;t get damaged during transportation. Our diligent and professional cargo service is market proven for its efficient services and cost-effective rates. <b>Our company</b> operates on the principles of safety, integrity and reliability.<br />
-                        For movement of goods, we have got wide variety of trucks which a <b>customer can choose</b> according to their needs. For details on types and sizes of trucks please refer to our charges section. Call us for further details.
+				<div class="entry-content p_justify">
+					<div class="col-md-5 col-sm-12">
+						<div  class="col-md-12 col-sm-12">
+							<img src="/assets/packing_service.jpg" alt="Packing &amp; Moving" title="Packing &amp; Moving" >
+						</div>
+						<div class="col-md-12 col-sm-12 bottom_button_partial">
+							<%=render partial:"quote_button_call_us"%>
+						</div>	
+					</div>
+					<p class="col-md-7 col-sm-12">
+						At <b>1300 EAGLE MOVERS</b>, we provide efficient packing material that is reliable to face any situation and circumstances. Goods are packed in cuboid boxes with internal walls of bubble wrap to give extra care. For more fragile and delicate items we use eco- friendly, highly flexible fiber sheets. With due attention to minute details while packing processes, <b>our packing experts</b>, work tirelessly to make sure that the goods are perfectly packed and don&#8217;t get damaged during transportation. Our diligent and professional cargo service is market proven for its efficient services and cost-effective rates. <b>Our company</b> operates on the principles of safety, integrity and reliability.<br />
+                        For movement of goods, we have got wide variety of trucks which a <b>customer can choose</b> according to their needs. For details on types and sizes of trucks please refer to our charges section. <br/><a href="<%= home_contact_path%>">Call us for further details.</a>
                         </p>
 					</p>
 				</div><!-- .entry-content -->
@@ -57,4 +64,4 @@ post-9 img {
 		</div><!-- #content -->
     </div><!-- #primary -->
 </div><!-- #main -->
-<%=render partial:"quote_button_call_us"%>
+

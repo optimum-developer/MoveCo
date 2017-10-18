@@ -4595,12 +4595,20 @@ body.boxed {
     padding-left: 4%;
 }
 
+.bottom_button_partial{
+	padding-top: 15%;
+  padding-left: 0;
+}
+
 .logo_font{
 	font-family: eras medium itc;
 	font-size: 37px;
     font-weight: 500;
 }
 
+.p_justify{
+	    text-align: justify;
+}
 .content_font_color{
 	color: #868686;
 }

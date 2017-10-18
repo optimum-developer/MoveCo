@@ -21,7 +21,7 @@ post-9 img {
 	document.getElementById("home_page_link").className = "";
 </script>
 <section class="ls section_padding_top_100 section_padding_bottom_75">
-	<div class="container">
+	<div class="container" style="padding-top: 70px;padding-bottom: 35px;">
 		<div class="row">
 			<div class="col-sm-12 text-center">
 				<div class="framed-heading bottommargin_15">
@@ -39,11 +39,18 @@ post-9 img {
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 			<article id="post-9" class="post-9 page type-page status-publish hentry">
-				<div class="entry-content">
-					<p>
-						<img style="float:left; padding-right:30px;" src="/assets/Secure-Storage.gif" alt="Warehouse and Storage Facility" title="Warehouse and Storage Facility"  >
-						<b>1300 eagle movers</b> offer storage and in-transit <b>warehousing facilities</b> for House Hold Goods, <b>Furniture</b>, Industrial Goods &#038; automobiles. Goods can be stored for short or long time at our spacious warehouses which are divided into different sections for varied materials. Our warehouses are modern which are equipped with standard racking, are clean and are well-marked under appropriate tagging system. Warehouses are also equipped with sufficient protection arrangements for <b>client&#8217;s valued inventory</b>. The warehousing facility includes multiple loading docks with sample space for staging of materials for receiving and shipping. All the goods entering the warehouse are appropriately checked under stringent inspection standards and are stored under hygienic environmental conditions.
-						Call us for further details.</p>
+				<div class="entry-content p_justify">
+					<div class="col-md-5 col-sm-12">
+						<div  class="col-md-12 col-sm-12">
+							<img style="float:left; padding-right:30px;" src="/assets/Secure-Storage.gif" alt="Warehouse and Storage Facility" title="Warehouse and Storage Facility"  >
+						</div>
+						<div class="col-md-12 col-sm-12 bottom_button_partial">
+							<%=render partial:"quote_button_call_us"%>
+						</div>	
+					</div>
+					<p class="col-md-7 col-sm-12">
+						<b>1300 EAGLE MOVERS</b> offer storage and in-transit <b>warehousing facilities</b> for House Hold Goods, <b>Furniture</b>, Industrial Goods &#038; automobiles. Goods can be stored for short or long time at our spacious warehouses which are divided into different sections for varied materials. Our warehouses are modern which are equipped with standard racking, are clean and are well-marked under appropriate tagging system. Warehouses are also equipped with sufficient protection arrangements for <b>client&#8217;s valued inventory</b>. The warehousing facility includes multiple loading docks with sample space for staging of materials for receiving and shipping. All the goods entering the warehouse are appropriately checked under stringent inspection standards and are stored under hygienic environmental conditions. <br/><a href="<%= home_contact_path%>">Call us for further details.</a>
+						</p>
 						
 					</p>
 				</div><!-- .entry-content -->
@@ -56,6 +63,6 @@ post-9 img {
 		</div><!-- #content -->
     </div><!-- #primary -->
 </div><!-- #main -->
-<%=render partial:"quote_button_call_us"%>
+
 
 	
