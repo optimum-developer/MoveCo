@@ -17,6 +17,7 @@ gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
+gem 'jquery-rails'
 gem 'twilio-ruby', '~> 5.2.2'
 gem 'paypal-sdk-rest'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -42,6 +43,11 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'capistrano','~> 3.4.0',          require: false
+  gem 'capistrano-rvm','~> 0.1.2',      require: false
+  gem 'capistrano-rails','~> 1.1.5',    require: false
+  gem 'capistrano-bundler','~> 1.1.4',  require: false
+  gem 'capistrano3-puma', '~> 1.2.1' ,  require: false
 end
 
 group :development do
