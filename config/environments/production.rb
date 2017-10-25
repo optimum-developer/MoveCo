@@ -98,6 +98,7 @@ Rails.application.configure do
   # :authentication => :plain,
   # :enable_starttls_auto => true
   # }
+  Rails.application.config.assets.precompile += %w( *.js ^[^_]*.css *.css.erb )
   ActionMailer::Base.smtp_settings = {
    :user_name => 'gulsharn@codegaragetech.com',
    :password => 'Gulshan@123',
