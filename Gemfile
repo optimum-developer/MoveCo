@@ -48,6 +48,7 @@ group :development, :test do
   gem 'capistrano-rails','~> 1.1.5',    require: false
   gem 'capistrano-bundler','~> 1.1.4',  require: false
   gem 'capistrano3-puma', '~> 1.2.1' ,  require: false
+  gem 'capistrano3-delayed-job', '~> 1.6',   require: false
 end
 
 group :development do
