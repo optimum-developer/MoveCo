@@ -17,11 +17,16 @@
 
 <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 <link rel="icon" href="/assets/favicon.JPG" sizes="16x16" type="image/jpg">
-<link rel="stylesheet" href="/assets/bootstrap.min.css">
-<link rel="stylesheet" href="/assets/main.css" id="color-switcher-link">
-<link rel="stylesheet" href="/assets/animations.css">
-<link rel="stylesheet" href="/assets/fonts.css">
-<script src="/assets/vendor/modernizr-2.6.2.min.js"></script>
+<%= stylesheet_link_tag "/assets/bootstrap.min.css"%>
+<%= stylesheet_link_tag "/assets/main.css" , :id => "color-switcher-link"%>
+<%= stylesheet_link_tag "/assets/animations.css"%>
+<%= stylesheet_link_tag "/assets/fonts.css"%>
+<!-- <link rel="stylesheet" href="/assets/bootstrap.min.css">
+<link rel="stylesheet" href="/assets/main.css" id="color-switcher-link"> -->
+<!-- <link rel="stylesheet" href="/assets/animations.css">
+<link rel="stylesheet" href="/assets/fonts.css"> -->
+<%= javascript_include_tag "/assets/vendor/modernizr-2.6.2.min.js" %>
+<!-- <script src="/assets/vendor/modernizr-2.6.2.min.js"></script> -->
 
 <!--[if lt IE 9]>
     <script src="/assets/vendor/html5shiv.min.js"></script>
@@ -201,27 +206,24 @@ REQUEST A CALL BACK</a>
 		<!-- template sections -->
 
 		<section class="page_toplogo table_section ls mainpge_toplogo section_padding_25">
-			<div class="header_div">
-				<div class="row">
-					<!-- <div class="col-sm-3 top_strip_elmt" style="padding-left: 5%;">info@eaglemover.com.au</div> -->
-					<div class="col-md-6 col-sm-4 col-xs-12 media_center_align" style="margin: 0; padding: 0;">
-						<img class="col-md-1 col-sm-2" src="/assets/telephone _icon.png" style="height: 17px;">
-						<div class="col-md-10 col-sm-10 top_strip_elmt media_center_align" style="margin:0; padding-top: 4px;    padding-left: 0; padding-bottom: 0;">1300-EAGLE MOVERS</div>
+		  <div class="row header_div">
+		    <div class="col-md-9 col-sm-9" style="margin: 0; ">
+						<div class="ringing_phone_icon" style="margin: 0;">
+						<img class="media_center_align" src="/assets/ring-phone.png" style="">
+						</div>
+						<div class="media_center_align top_strip_elmt" style="margin: 0; padding-left: 30px">1300-EAGLE MOVERS</div>
+		    </div>
+		    <div class="col-md-3 col-sm-3 col-xs-12 top_right_div" style="margin:0;">
+					<div class="col-md-3 col-sm-3  col-xs-12 top_strip_elmt media_center_align" style="padding: 0;text-align: center;">
+						<a class="" href="mailto:info@eaglemovers.com.au">
+							<img src="/assets/header_mail.png" style="height: 17px;">
+						</a>
 					</div>
-					<div class="col-md-4 col-sm-5 col-xs-12" ></div>
-					
-					<div class="col-md-2 col-sm-3  col-xs-12" style="margin:0;">
-						<div class="col-md-3 col-sm-3  col-xs-12 top_strip_elmt media_center_align" style="padding: 0;text-align: center;">
-							<a class="" href="mailto:info@eaglemovers.com.au">
-								<img src="/assets/header_mail.png" style="height: 17px;">
-							</a>
-						</div>
-						<div class="col-md-8 col-sm-3  col-xs-12 top_strip_elmt media_center_align" style="padding-top: 1px;padding: 0;">
-							info@eaglemover.com.au
-						</div>
+					<div class="col-md-8 col-sm-3  col-xs-12 top_strip_elmt media_center_align" style="padding-top: 1px;padding: 0;">
+						info@eaglemovers.com.au
 					</div>
 				</div>
-			</div>
+	    </div>
 			
 			<!--  -->
 			 <div class="row" style="">
