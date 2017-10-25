@@ -1,5 +1,5 @@
-set :stage, :production
-set :branch, :master
+set :stage, :staging
+set :branch, :staging
 
 server '139.59.88.132',
   roles: %w{app web db},
@@ -9,8 +9,8 @@ server '139.59.88.132',
       password: 'TTT@123'
   }
 
-set :deploy_to,       "/home/#{fetch(:user)}/production/#{fetch(:application)}"
-set :puma_bind,       "unix://#{shared_path}/tmp/sockets/#{fetch(:application)}-puma.sock"
+set :deploy_to,       "/home/#{fetch(:user)}/staging/#{fetch(:application)}"
+set :puma_bind,       "unix://#{shared_path}/tmp/sockets/#{fetch(:application)}_staging-puma.sock"
 set :puma_state,      "#{shared_path}/tmp/pids/puma.state"
 set :puma_pid,        "#{shared_path}/tmp/pids/puma.pid"
 set :puma_access_log, "#{release_path}/log/puma.error.log"
