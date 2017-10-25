@@ -4613,9 +4613,19 @@ body.boxed {
 	color: #868686;
 }
 
+.ringing_phone_icon{
+	float: left;
+}
 @media only screen and (max-width: 500px) {
     .logo_font {
         font-size: 27px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .ringing_phone_icon {
+        float: initial !important;
+        text-align: center;
     }
 }
 
@@ -4624,12 +4634,49 @@ body.boxed {
         text-align: center;
     }
 }
-/*@media only screen and (max-width: 767px) {
-    .top_mail_icon {
-        float: left;
+
+/*@media only screen and (max-width: 1315px) {
+    .top_right_div {
+       	padding-right: 4%;
     }
 }*/
 
+@media only screen and (max-width: 1400px) {
+    .top_right_div {
+       	padding-left: 8%;
+    }
+}
+
+
+@media only screen and (max-width: 1194px) {
+    .top_right_div {
+       	
+       	padding-left: 7%;
+    }
+}
+
+@media only screen and (max-width: 1098px) {
+    .top_right_div {
+        padding-left: 5%;
+    }
+}
+
+@media only screen and (max-width: 1020px) {
+    .top_right_div {
+        padding-left: 4%;
+    }
+}
+@media only screen and (max-width: 960px) {
+    .top_right_div {
+        padding-left: 2%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .top_right_div {
+        padding-left: 8%;
+    }
+}
 @media only screen and (max-width: 767px) {
     .top_media_icons_div {
         text-align: center;
