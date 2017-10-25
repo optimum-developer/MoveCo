@@ -4663,18 +4663,21 @@ body.boxed {
 
 @media only screen and (max-width: 1020px) {
     .top_right_div {
-        padding-left: 4%;
-    }
-}
-@media only screen and (max-width: 960px) {
-    .top_right_div {
         padding-left: 2%;
     }
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 904px) {
+    .top_right_div {
+        padding-left: 0;
+        padding-right: 7%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
     .top_right_div {
         padding-left: 8%;
+        padding-right: 2%;
     }
 }
 @media only screen and (max-width: 767px) {
