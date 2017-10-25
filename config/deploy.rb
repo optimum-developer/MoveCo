@@ -2,7 +2,7 @@
 lock '3.4.1'
 
 set :application, 'MoveCo'
-set :repo_url, 'parambir0kaur@gmail.com'
+set :repo_url, 'https://github.com/parambir0kaur/MoveCo.git'
 
 set :linked_files, "config/database.yml", "config/secrets.yml"
 set :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/uploads"
