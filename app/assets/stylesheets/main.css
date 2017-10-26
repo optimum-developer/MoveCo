@@ -3548,6 +3548,50 @@ body.boxed {
 	color: white;
 }
 
+@keyframes blink {
+    0% {
+           background-color: rgb(152, 198, 13)
+    }
+    50% {
+           background-color: rgb(183, 209, 106)
+    }
+    100% {
+           background-color: rgb(152, 198, 13)
+    }
+}
+@-webkit-keyframes blink {
+    0% {
+           background-color: rgb(152, 198, 13)
+    }
+    50% {
+           background-color: rgb(183, 209, 106)
+    }
+    100% {
+           background-color: rgb(152, 198, 13)
+    }
+}
+
+ .download {
+
+    padding: 15px 15px 15px 15px;
+    text-align:center;
+    margin-bottom: 4px;
+    border-radius: 54px;
+    font-size: 17px;
+    -moz-transition:all 0.5s ease-in-out;
+    -webkit-transition:all 0.5s ease-in-out;
+    -o-transition:all 0.5s ease-in-out;
+    -ms-transition:all 0.5s ease-in-out;
+    transition:all 0.5s ease-in-out;
+    -moz-animation:blink normal 1.5s infinite ease-in-out;
+    /* Firefox */
+    -webkit-animation:blink normal 1.5s infinite ease-in-out;
+    /* Webkit */
+    -ms-animation:blink normal 1.5s infinite ease-in-out;
+    /* IE */
+    animation:blink normal 1.5s infinite ease-in-out;
+    /* Opera */
+}	
 .ls h1,
 .ls h2,
 .ls h3,
@@ -4622,6 +4666,12 @@ body.boxed {
     }
 }
 
+@media only screen and (max-width: 999px) {
+    .container_orange_ms {
+        background-color: rgba(246, 147, 35, 0.85)
+    }
+}
+
 @media only screen and (max-width: 767px) {
     .ringing_phone_icon {
         float: initial !important;
@@ -4703,7 +4753,7 @@ body.boxed {
     transition: all 0.4s linear 0s;
 }
 .book_white_button:hover {
-   background-color: #1d3052;
+   background-color: red;
 }
 .top_strip_elmt{
 	color: white;
@@ -12560,6 +12610,67 @@ a.theme-color-icon.social-icon:hover {
 a.theme-color-icon.border-icon:hover {
 	border-color: #f69323;
 }
+
+/* request a call back modal*/
+	.modal.left .modal-dialog,
+	.modal.right .modal-dialog {
+		position: fixed;
+		margin-top: 9%;
+		width: 320px;
+		-webkit-transform: translate3d(0%, 0, 0);
+		    -ms-transform: translate3d(0%, 0, 0);
+		     -o-transform: translate3d(0%, 0, 0);
+		        transform: translate3d(0%, 0, 0);
+	}
+
+	.modal.left .modal-content,
+	.modal.right .modal-content {
+		height: 100%;
+		overflow-y: auto;
+	}
+	
+	.modal.left .modal-body,
+	.modal.right .modal-body {
+		padding: 15px 15px 80px;
+	}
+
+/*Left*/
+	.modal.left.fade .modal-dialog{
+		left: -320px;
+		-webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+		   -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+		     -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+		        transition: opacity 0.3s linear, left 0.3s ease-out;
+	}
+	
+	.modal.left.fade.in .modal-dialog{
+		left: 0;
+	}
+        
+/*Right*/
+	.modal.right.fade .modal-dialog {
+		right: -320px;
+		-webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+		   -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+		     -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+		        transition: opacity 0.3s linear, right 0.3s ease-out;
+	}
+	
+	.modal.right.fade.in .modal-dialog {
+		right: 0;
+	}
+
+/* ----- MODAL STYLE ----- */
+	.modal-content {
+		border-radius: 0;
+		border: none;
+	}
+
+	.modal-header {
+		border-bottom-color: #EEEEEE;
+		background-color: #FAFAFA;
+	}
+
 
 .demo-icon {
 	display: inline-block;
