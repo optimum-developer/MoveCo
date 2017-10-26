@@ -4753,7 +4753,7 @@ body.boxed {
     transition: all 0.4s linear 0s;
 }
 .book_white_button:hover {
-   background-color: red;
+   background-color: #1d3052;
 }
 .top_strip_elmt{
 	color: white;
