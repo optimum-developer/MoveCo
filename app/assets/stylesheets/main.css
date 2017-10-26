@@ -4735,6 +4735,21 @@ body.boxed {
         text-align: center;
     }
 }
+
+  #toggle {
+    /*height: 202px;*/
+    background: #ccc;
+    color: #efefef;
+    font-size: 17px;
+    padding: 0px 10px 7px;
+    z-index: 1001;
+    position: fixed;
+    top: 30%;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    right: 13px;
+    margin-right: 24px;
+  }
 .book_white_button{
 		font-size: 14px;
     font-weight: 800;
@@ -11546,7 +11561,7 @@ totop
 */
 #toTop {
 	bottom: 0;
-	right: 0;
+	/*right: 0;*/
 	display: none;
 	width: 60px;
 	height: 40px;

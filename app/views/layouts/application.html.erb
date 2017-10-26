@@ -24,7 +24,8 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 
 <script src="/assets/vendor/modernizr-2.6.2.min.js"></script>
-
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <!--[if lt IE 9]>
     <script src="/assets/vendor/html5shiv.min.js"></script>
     <script src="/assets/vendor/respond.min.js"></script>
@@ -81,7 +82,27 @@
 	}
 </style>
 <body style="padding-right: 0">
-<a data-toggle="modal" data-toggle="modal" data-target="#myModal2"  class="side-enquiry request_callback" style="background-color: #98c60d;">
+<div id="toggle" style="display: none">
+	  	<form name="" action="<%=home_call_me_back_path%>" method="post" class="row form-inline wpcf7-form""  id="call_me_back_2" style="padding: 6%;">
+				    	<div class="col-md-12" style="padding: 0; margin-top: 3%;" >
+							<div style="display: none;">
+								<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+							</div>
+							<div class="form-group" style=" width: 100%">
+								<div class="input-group">
+									<i class="fa fa-phone highlight" style="    margin-top: 6px; color: #868686;z-index: 10;"></i>
+									<input type="number" aria-required="true" size="30" name="phone_number" id="phone_number_2" class="form-control" placeholder="Add your number" style="width: 100%;    margin-bottom: 1%; font-size: 14px;" required>
+								</div>
+							</div>
+				    	</div>
+				    	<div class="col-md-12" style="padding: 0; margin-top: 6%;" >
+							<input type="submit" onclick="call_me_back_details()" value="Request a call back" style="width: 100%; background-color: #394966;" class="">
+						</div>
+					</form>
+</div>
+<!-- <a data-toggle="modal" data-toggle="modal" data-target="#myModal2"  class="side-enquiry request_callback" style="background-color: #98c60d;">
+<span style="color: white;">REQUEST A CALL BACK</span></a> -->
+<a id="req_call_back_button" class="side-enquiry request_callback" style="background-color: #98c60d;">
 <span style="color: white;">REQUEST A CALL BACK</span></a>
 <div class="container demo">
 	<!-- Modal -->
@@ -343,12 +364,12 @@
 			<section class="page_copyright cs main_color2 section_padding_15 columns_margin_0">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-11 col-sm-12 text-center">
+						<div class="col-md-11 col-sm-10 text-center">
 							<p>
 								Copyright 2017 @ 1300 EAGLE MOVERS
 							</p>
 						</div>
-						<div class="hidden-md hidden-lg col-md-1 col-sm-12" style="text-align: center; padding-top: 4%;">
+						<div class="col-md-1 col-sm-2 dial_number" style="text-align: right; padding-top: 12px;">
 							<!-- <img  src="/assets/telephone _icon.png"> -->
 							<a class="download" href="tel:+1300324536 ">
 								<img  src="/assets/telephone _icon.png">
@@ -410,7 +431,11 @@
 
 		}
 
+$("#req_call_back_button").click(function() {
+  $( "#toggle" ).toggle( "slide" );
+});
 </script>
+
 </body>
 
 </html>
