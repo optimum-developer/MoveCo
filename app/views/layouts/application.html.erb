@@ -22,6 +22,9 @@
 <link rel="stylesheet" href="/assets/main.css" id="color-switcher-link">
 <link rel="stylesheet" href="/assets/animations.css">
 <link rel="stylesheet" href="/assets/fonts.css">
+<link rel="stylesheet" href="/assets/csshake-little.css">
+
+	
 
 <script src="/assets/vendor/modernizr-2.6.2.min.js"></script>
 <script src="//code.jquery.com/jquery-1.12.4.js"></script>
@@ -50,7 +53,7 @@
 	    right: -81px;
 	}
 
-
+z
 	.eagle_logo{
 		font-size: 35px;
 		padding-top: 1%;
@@ -81,8 +84,9 @@
 	    color: #394966;
 	}
 </style>
-<body style="padding-right: 0">
-<div id="toggle" style="display: none">
+<body style="padding-right: 0 ">
+	
+	<div id="toggle" style="display: none">
 	  	<form name="" action="<%=home_call_me_back_path%>" method="post" class="row form-inline wpcf7-form""  id="call_me_back_2" style="padding: 6%;">
 				    	<div class="col-md-12" style="padding: 0; margin-top: 3%;" >
 							<div style="display: none;">
@@ -369,12 +373,14 @@
 								Copyright 2017 @ 1300 EAGLE MOVERS
 							</p>
 						</div>
-						<div class="col-md-1 col-sm-2 dial_number" style="text-align: right; padding-top: 12px;">
-							<!-- <img  src="/assets/telephone _icon.png"> -->
-							<a class="download" href="tel:+1300324536 ">
-								<img  src="/assets/telephone _icon.png">
+						
+						<div class="col-md-1 col-sm-2 dial_number shake-little shake-constant shake-constant--hover" style="text-align: right; padding-top: 12px; position: fixed; right: -6px; bottom: 18px; z-index: 1001;">
+								<!-- <img  src="/assets/telephone _icon.png"> -->
+							<a  class="download" href="tel:+1300324536  ">
+									<img  src="/assets/telephone _icon.png">
 							</a>
 						</div>
+							
 					</div>
 				</div>
 			</section>
@@ -430,10 +436,9 @@
 		    }
 
 		}
-
-$("#req_call_back_button").click(function() {
-  $( "#toggle" ).toggle( "slide" );
-});
+        $("#req_call_back_button").click(function() {
+        $( "#toggle" ).toggle( "slide" );
+        });
 </script>
 
 </body>
