@@ -83,11 +83,19 @@ z
 	    font-size: 19px;
 	    color: #394966;
 	}
+
+		#hiddenPanel {z-index: 10001;position:fixed; top:213px; right:-200px; width:207px; background-color:whitesmoke; height:250px;}
+    #close-bar {cursor: pointer; top: 0px;position:absolute; left:-20px; background:#98c60d; color:white; width:27px; height:250px;}
 </style>
 <body style="padding-right: 0 ">
 	
-	<div id="toggle" style="display: none">
-	  	<form name="" action="<%=home_call_me_back_path%>" method="post" class="row form-inline wpcf7-form""  id="call_me_back_2" style="padding: 6%;">
+<!-- <a data-toggle="modal" data-toggle="modal" data-target="#myModal2"  class="side-enquiry request_callback" style="background-color: #98c60d;">
+<span style="color: white;">REQUEST A CALL BACK</span></a> -->
+<!-- <a id="req_call_back_button" class="side-enquiry request_callback" style="background-color: #98c60d;">
+<span style="color: white;">REQUEST A CALL BACK</span></a> -->
+
+ <section id="hiddenPanel" class="txt-highlight-color bg-color bg-pattern">
+ <form name="" action="<%=home_call_me_back_path%>" method="post" class="row form-inline wpcf7-form""  id="call_me_back_2" style="padding: 6%;">
 				    	<div class="col-md-12" style="padding: 0; margin-top: 3%;" >
 							<div style="display: none;">
 								<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -95,7 +103,7 @@ z
 							<div class="form-group" style=" width: 100%">
 								<div class="input-group">
 									<i class="fa fa-phone highlight" style="    margin-top: 6px; color: #868686;z-index: 10;"></i>
-									<input type="number" aria-required="true" size="30" name="phone_number" id="phone_number_2" class="form-control" placeholder="Add your number" style="width: 100%;    margin-bottom: 1%; font-size: 14px;" required>
+									<input type="number" aria-required="true" size="30" name="phone_number" id="phone_number_2" class="form-control request_number_field" placeholder="Add your number" style="display:none; width: 100%;    margin-bottom: 1%; font-size: 14px;" required>
 								</div>
 							</div>
 				    	</div>
@@ -103,11 +111,9 @@ z
 							<input type="submit" onclick="call_me_back_details()" value="Request a call back" style="width: 100%; background-color: #394966;" class="">
 						</div>
 					</form>
-</div>
-<!-- <a data-toggle="modal" data-toggle="modal" data-target="#myModal2"  class="side-enquiry request_callback" style="background-color: #98c60d;">
-<span style="color: white;">REQUEST A CALL BACK</span></a> -->
-<a id="req_call_back_button" class="side-enquiry request_callback" style="background-color: #98c60d;">
-<span style="color: white;">REQUEST A CALL BACK</span></a>
+  <span id="close-bar" class="myButton" > <span style="writing-mode: vertical-rl; padding-top: 45px; ">< Request a call back</span></span>
+</section>
+
 <div class="container demo">
 	<!-- Modal -->
 	<div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
@@ -420,11 +426,13 @@ z
 		                	if(data["notice_status"]=="true"){
 								$.notify("Thanks for your request. We will get back to you shortly.", "success");                                    
 		                		$("#phone_number").val("")
+		                		$("#phone_number_2").val("")
 		                	}
 
 		                	else{
 		                		$.notify("Something Went Wrong! Please Try Again");
 		                		$("#phone_number").val("")
+		                		$("#phone_number_2").val("")
 		                	}
 		                	
 		                },
@@ -438,6 +446,23 @@ z
 		}
         $("#req_call_back_button").click(function() {
         $( "#toggle" ).toggle( "slide" );
+        });
+
+        var speed = 300;
+        $('#close-bar').on('click', function(){
+            var $$ = $(this),
+                panelWidth = $('#hiddenPanel').outerWidth();
+                $(".request_number_field").show();
+            if( $$.is('.myButton') ){
+            		$('#hiddenPanel').css("width", "439px");
+                $('#hiddenPanel').animate({right:0}, speed);
+                $$.removeClass('myButton')
+            } else {
+            		$('#hiddenPanel').css("width", "448px");
+                $('#hiddenPanel').animate({right:-panelWidth}, speed);
+                $$.addClass('myButton')
+            }
+
         });
 </script>
 
