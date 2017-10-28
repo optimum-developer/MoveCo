@@ -53,7 +53,7 @@
 	    right: -81px;
 	}
 
-z
+
 	.eagle_logo{
 		font-size: 35px;
 		padding-top: 1%;
@@ -84,7 +84,7 @@ z
 	    color: #394966;
 	}
 
-		#hiddenPanel {z-index: 10001;position:fixed; top:213px; right:-200px; width:207px; background-color:whitesmoke; height:250px;}
+		#hiddenPanel {z-index: 10001;position:fixed; top:25%; right:-200px; width:208px; background-color:whitesmoke; height:250px;}
     #close-bar {cursor: pointer; top: 0px;position:absolute; left:-20px; background:#98c60d; color:white; width:27px; height:250px;}
 </style>
 <body style="padding-right: 0 ">
@@ -94,7 +94,7 @@ z
 <!-- <a id="req_call_back_button" class="side-enquiry request_callback" style="background-color: #98c60d;">
 <span style="color: white;">REQUEST A CALL BACK</span></a> -->
 
- <section id="hiddenPanel" class="txt-highlight-color bg-color bg-pattern">
+ <section id="hiddenPanel" class="col-md-12 col-md-6 txt-highlight-color bg-color bg-pattern">
  <form name="" action="<%=home_call_me_back_path%>" method="post" class="row form-inline wpcf7-form""  id="call_me_back_2" style="padding: 6%;">
 				    	<div class="col-md-12" style="padding: 0; margin-top: 3%;" >
 							<div style="display: none;">
@@ -404,6 +404,9 @@ z
 
 	<script type="text/javascript">
 
+		 // slider_div_default_width = (15/100*($(window).width())).toString() + "px"
+   //      $('#hiddenPanel').css("width", slider_div_default_width);
+         
 		function call_me_back_details() {
 			if($("#phone_number").val() !="" || $("#phone_number_2").val() !=""){
 			// alert("wewhgyfg")
@@ -448,22 +451,38 @@ z
         $( "#toggle" ).toggle( "slide" );
         });
 
+       
         var speed = 300;
         $('#close-bar').on('click', function(){
+        		if( $(window).width() < 800){
+        	  	 $('#hiddenPanel').css("padding-top", "5%");
+        		}
+        	  if( $(window).width() > 387)
+        	  {
+        			slider_div_width = ($(window).width()/2).toString() + "px"
+        			slider_closing_div_width = (($(window).width()/2) + 5).toString() + "px"
+        	  }	
+        	  else
+        	  {
+        	  	slider_div_width = (($(window).width()) *0.8).toString() + "px"
+        	  	slider_closing_div_width = ((($(window).width()) *0.8) + 5 ).toString()+ "px"
+        	  	 $('#hiddenPanel').css("padding-top", "10%");
+        	  }
             var $$ = $(this),
                 panelWidth = $('#hiddenPanel').outerWidth();
                 $(".request_number_field").show();
             if( $$.is('.myButton') ){
-            		$('#hiddenPanel').css("width", "439px");
+            		$('#hiddenPanel').css("width", slider_div_width);
                 $('#hiddenPanel').animate({right:0}, speed);
                 $$.removeClass('myButton')
             } else {
-            		$('#hiddenPanel').css("width", "448px");
+            		$('#hiddenPanel').css("width", slider_closing_div_width);
                 $('#hiddenPanel').animate({right:-panelWidth}, speed);
                 $$.addClass('myButton')
             }
 
         });
+
 </script>
 
 </body>
