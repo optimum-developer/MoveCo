@@ -3553,7 +3553,7 @@ body.boxed {
            background-color: rgb(152, 198, 13)
     }
     50% {
-           background-color: rgb(183, 209, 106)
+           background-color: rgb(245, 146, 35)
     }
     100% {
            background-color: rgb(152, 198, 13)
@@ -4685,49 +4685,24 @@ body.boxed {
     }
 }
 
-/*@media only screen and (max-width: 1315px) {
-    .top_right_div {
-       	padding-right: 4%;
-    }
-}*/
-
 @media only screen and (max-width: 1400px) {
-    .top_right_div {
-       	padding-left: 8%;
+    .top_email_div {
+       	text-align: right;
+    }
+    .top_right_div{
+    		display: none;
+    }
+    .top_email_div {
+       	display: block;
     }
 }
 
-
-@media only screen and (max-width: 1194px) {
-    .top_right_div {
-       	
-       	padding-left: 7%;
+ @media only screen and (max-width: 767px) {
+  	.top_right_div{
+    		display: block;
     }
-}
-
-@media only screen and (max-width: 1098px) {
-    .top_right_div {
-        padding-left: 5%;
-    }
-}
-
-@media only screen and (max-width: 1020px) {
-    .top_right_div {
-        padding-left: 2%;
-    }
-}
-
-@media only screen and (max-width: 904px) {
-    .top_right_div {
-        padding-left: 0;
-        padding-right: 7%;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .top_right_div {
-        padding-left: 8%;
-        padding-right: 2%;
+    .top_email_div {
+       	display: none;
     }
 }
 @media only screen and (max-width: 767px) {

@@ -38,6 +38,13 @@
 </head>
 <style type="text/css">
 
+.bounce {
+	animation-duration: 700ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;animation-name: bounce;
+  -moz-animation-name: bounce;
+}
+
 	.request_callback{
 		background: none repeat scroll 0 0 #000;
 	    color: #efefef;
@@ -84,25 +91,25 @@
 	    color: #394966;
 	}
 
-		#hiddenPanel {z-index: 10001;position:fixed; top:25%; right:-200px; width:208px; background-color:whitesmoke; height:250px;}
+		#hiddenPanel {z-index: 10001;position:fixed; top:30%; right:-200px; width:208px; background-color:whitesmoke; height:250px;}
     #close-bar {cursor: pointer; top: 0px;position:absolute; left:-20px; background:#98c60d; color:white; width:27px; height:250px;}
 </style>
 <body style="padding-right: 0 ">
-	
 <!-- <a data-toggle="modal" data-toggle="modal" data-target="#myModal2"  class="side-enquiry request_callback" style="background-color: #98c60d;">
 <span style="color: white;">REQUEST A CALL BACK</span></a> -->
 <!-- <a id="req_call_back_button" class="side-enquiry request_callback" style="background-color: #98c60d;">
 <span style="color: white;">REQUEST A CALL BACK</span></a> -->
 
  <section id="hiddenPanel" class="col-md-12 col-md-6 txt-highlight-color bg-color bg-pattern">
- <form name="" action="<%=home_call_me_back_path%>" method="post" class="row form-inline wpcf7-form""  id="call_me_back_2" style="padding: 6%;">
+ <form name="" action="<%=home_call_me_back_path%>" method="post" class="row form-inline wpcf7-form""  id="call_me_back_2" style="padding: 6%;margin-top: 10%;
+    margin-bottom: 10%;padding-top: 0;padding-bottom: 0;">
 				    	<div class="col-md-12" style="padding: 0; margin-top: 3%;" >
 							<div style="display: none;">
 								<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 							</div>
 							<div class="form-group" style=" width: 100%">
 								<div class="input-group">
-									<i class="fa fa-phone highlight" style="    margin-top: 6px; color: #868686;z-index: 10;"></i>
+									<i class="fa fa-phone highlight" style=" margin-top: 6px; color: #868686;z-index: 10;"></i>
 									<input type="number" aria-required="true" size="30" name="phone_number" id="phone_number_2" class="form-control request_number_field" placeholder="Add your number" style="display:none; width: 100%;    margin-bottom: 1%; font-size: 14px;" required>
 								</div>
 							</div>
@@ -111,7 +118,7 @@
 							<input type="submit" onclick="call_me_back_details()" value="Request a call back" style="width: 100%; background-color: #394966;" class="">
 						</div>
 					</form>
-  <span id="close-bar" class="myButton" > <span style="writing-mode: vertical-rl; padding-top: 45px; ">< Request a call back</span></span>
+  <span id="close-bar" class="myButton" > <span style="writing-mode: vertical-rl; padding-top: 45px; ">Request a call back</span></span>
 </section>
 
 <div class="container demo">
@@ -190,13 +197,23 @@
 
 		<section class="page_toplogo table_section ls mainpge_toplogo section_padding_25">
 		  <div class="row header_div">
-		    <div class="col-md-9 col-sm-9" style="margin: 0; ">
+		    <div class="col-md-6 col-sm-6" style="margin: 0; ">
 						<div class="ringing_phone_icon" style="margin: 0;">
 						<img class="media_center_align" src="/assets/ring-phone.png" style="">
 						</div>
 						<div class="media_center_align top_strip_elmt" style="margin: 0; padding-left: 30px">1300-EAGLE MOVERS</div>
 		    </div>
-		    <div class="col-md-3 col-sm-3 col-xs-12 top_right_div" style="margin:0;">
+		    <div class="col-md-6 col-sm-6 col-xs-12 top_email_div" style="margin:0;">
+					<div class="top_strip_elmt" style="float: right; padding-left: 13px;">
+						info@eaglemovers.com.au
+					</div>
+					<div class="" style="">
+						<a class="" href="mailto:info@eaglemovers.com.au">
+							<img src="/assets/header_mail.png" style="height: 17px;">
+						</a>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-12 top_right_div" style="margin:0;">
 					<div class="col-md-3 col-sm-3  col-xs-12 top_strip_elmt media_center_align" style="padding: 0;text-align: center;">
 						<a class="" href="mailto:info@eaglemovers.com.au">
 							<img src="/assets/header_mail.png" style="height: 17px;">
@@ -380,10 +397,12 @@
 							</p>
 						</div>
 						
-						<div class="col-md-1 col-sm-2 dial_number shake-little shake-constant shake-constant--hover" style="text-align: right; padding-top: 12px; position: fixed; right: -6px; bottom: 18px; z-index: 1001;">
+						<div class="hidden-md hidden-lg bounce col-md-1 col-sm-2 dial_number" style="
+    text-align: right; padding-top: 12px; position: fixed; right: -6px; bottom: 18px; z-index: 1001;">
 								<!-- <img  src="/assets/telephone _icon.png"> -->
 							<a  class="download" href="tel:+1300324536  ">
-									<img  src="/assets/telephone _icon.png">
+									<!-- <img  src="/assets/telephone _icon.png"> -->
+									<%= image_tag("/assets/telephone_icon.png")%>
 							</a>
 						</div>
 							
@@ -404,6 +423,9 @@
 
 	<script type="text/javascript">
 
+		setTimeout(function(){
+		    $('.dial_number').removeClass('bounce');
+		},2000);
 		 // slider_div_default_width = (15/100*($(window).width())).toString() + "px"
    //      $('#hiddenPanel').css("width", slider_div_default_width);
          
@@ -454,19 +476,23 @@
        
         var speed = 300;
         $('#close-bar').on('click', function(){
-        		if( $(window).width() < 800){
-        	  	 $('#hiddenPanel').css("padding-top", "5%");
-        		}
-        	  if( $(window).width() > 387)
+        	  if( $(window).width() > 948)
         	  {
-        			slider_div_width = ($(window).width()/2).toString() + "px"
-        			slider_closing_div_width = (($(window).width()/2) + 5).toString() + "px"
+        			slider_div_width = ($(window).width()/4).toString() + "px"
+        			slider_closing_div_width = (($(window).width()/4) + 5).toString() + "px"
+        			$('#hiddenPanel').css("padding-top", "1%");
         	  }	
+        	  else if($(window).width() < 948 && $(window).width() > 475)
+        	  {
+        	  	slider_div_width = ($(window).width()/2).toString() + "px"
+        			slider_closing_div_width = (($(window).width()/2) + 5).toString() + "px"
+        			$('#hiddenPanel').css("padding-top", "2%");
+        	  }
         	  else
         	  {
-        	  	slider_div_width = (($(window).width()) *0.8).toString() + "px"
-        	  	slider_closing_div_width = ((($(window).width()) *0.8) + 5 ).toString()+ "px"
-        	  	 $('#hiddenPanel').css("padding-top", "10%");
+        	  	slider_div_width = (($(window).width()) - 20).toString() + "px"
+        	  	slider_closing_div_width = ((($(window).width()) - 13) ).toString()+ "px"
+        	  	$('#hiddenPanel').css("padding-top", "5%");
         	  }
             var $$ = $(this),
                 panelWidth = $('#hiddenPanel').outerWidth();
