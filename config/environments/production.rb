@@ -11,7 +11,7 @@ Rails.application.configure do
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on.
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local       = true
   config.action_controller.perform_caching = true
 
   # Attempt to read encrypted secrets from `config/secrets.yml.enc`.
@@ -100,13 +100,22 @@ Rails.application.configure do
   # :authentication => :plain,
   # :enable_starttls_auto => true
   # }
+  # ActionMailer::Base.smtp_settings = {
+  #  :user_name => 'gulsharn@codegaragetech.com',
+  #  :password => 'Gulshan@123',
+  #  :domain => 'codegaragetech.com',
+  #  :address => 'smtp.sendgrid.net',
+  #  :port => 587,
+  #  :authentication => :plain,
+  #  :enable_starttls_auto => true
+  # }
   ActionMailer::Base.smtp_settings = {
-   :user_name => 'gulsharn@codegaragetech.com',
-   :password => 'Gulshan@123',
-   :domain => 'codegaragetech.com',
-   :address => 'smtp.sendgrid.net',
-   :port => 587,
-   :authentication => :plain,
-   :enable_starttls_auto => true
+  :user_name => 'amandeepkaur@codegaragetech.com',
+  :password => 'Amandeep!@#',
+  :domain => 'codegaragetech.com',
+  :address => 'smtp.gmail.com',
+  :port => 587,
+  :authentication => :plain,
+  :enable_starttls_auto => true
   }
 end
