@@ -4679,11 +4679,6 @@ body.boxed {
     }
 }
 
-@media only screen and (max-width: 767px) {
-    .media_center_align {
-        text-align: center;
-    }
-}
 
 @media only screen and (max-width: 6000px) {
     .top_email_div {
@@ -4694,6 +4689,18 @@ body.boxed {
     }
     .top_email_div {
        	display: block;
+    }
+    .top_strip_elmt{
+    	padding-left: 30px
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .media_center_align {
+        text-align: center;
+    }
+    .top_strip_elmt{
+    	padding: 0;
     }
 }
 
