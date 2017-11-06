@@ -361,7 +361,7 @@
 							</p>
 						</div>
 						
-						<div class="hidden-md hidden-lg hidden-sm bounce col-md-1 col-sm-2 dial_number" style="
+						<div id="dial_number_icon" class="col-md-1 col-sm-2 dial_number" style="display: none;
     text-align: right; padding-top: 12px; position: fixed; right: -6px; bottom: 18px; z-index: 1001;">
 								<!-- <img  src="/assets/telephone _icon.png"> -->
 							<a  class="download" href="tel:+1300324536  ">
@@ -386,10 +386,16 @@
 
 
 	<script type="text/javascript">
-
-		setTimeout(function(){
-		    $('.dial_number').removeClass('bounce');
-		},700);
+		$( document ).ready(function() {
+			$('.dial_number').addClass('bounce');
+		    setTimeout(function(){
+			    $('.dial_number').removeClass('bounce');
+			},500);
+			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			    document.getElementById("dial_number_icon").style.display = "block";
+			}
+		});
+		
 		 // slider_div_default_width = (15/100*($(window).width())).toString() + "px"
    //      $('#hiddenPanel').css("width", slider_div_default_width);
          

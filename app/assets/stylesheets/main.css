@@ -4685,7 +4685,7 @@ body.boxed {
     }
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 6000px) {
     .top_email_div {
        	text-align: right;
     }
@@ -4705,6 +4705,11 @@ body.boxed {
        	display: none;
     }
 }
+/*@media only screen and (max-width: 400px) {
+	.dial_number{
+    	display: block;
+    }
+}*/
 @media only screen and (max-width: 767px) {
     .top_media_icons_div {
         text-align: center;
