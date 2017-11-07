@@ -367,6 +367,7 @@
 							<a  class="download" href="tel:+1300324536  ">
 									<!-- <img  src="/assets/telephone _icon.png"> -->
 									<%= image_tag("/assets/telephone_icon.png")%>
+
 							</a>
 						</div>
 							
@@ -390,7 +391,7 @@
 			$('.dial_number').addClass('bounce');
 		    setTimeout(function(){
 			    $('.dial_number').removeClass('bounce');
-			},1200);
+			},1500);
 			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 			    document.getElementById("dial_number_icon").style.display = "block";
 			}
