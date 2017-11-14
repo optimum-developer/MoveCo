@@ -3559,12 +3559,12 @@ body.boxed {
            background-color: rgb(152, 198, 13)
     }
 }
-@-webkit-keyframes blink {
+-webkit-keyframes blink {
     0% {
            background-color: rgb(152, 198, 13)
     }
     50% {
-           background-color: rgb(183, 209, 106)
+           background-color: rgb(245, 146, 35)
     }
     100% {
            background-color: rgb(152, 198, 13)

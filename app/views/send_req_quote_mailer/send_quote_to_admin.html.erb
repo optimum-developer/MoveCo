@@ -1,5 +1,5 @@
 <div class="jumbotron text-center">
- <h2>You Got A New Booking!</h2>
+ <h2>Following customer has requested for quote with below details(details to be fetched from GET A QUOTE Form):</h2>
 </div>
 <div class="container">
  <div class="row">
@@ -15,6 +15,18 @@
      <h3>Phone:</h3>        
      <p><%=@u_phone%></p>
    </div>
+   <div class="col-sm-4">
+     <h3>Date to move:</h3>        
+     <p><%=@u_date_to_move%></p>
+   </div><div class="col-sm-4">
+     <h3>Move from:</h3>        
+     <p><%=@u_move_from%></p>
+   </div>
+   </div><div class="col-sm-4">
+     <h3>Move to:</h3>        
+     <p><%=@u_move_to%></p>
+   </div>
+
    <div class="col-sm-4">
      <h3>Description:</h3>        
      <p><%=@u_des%></p>
