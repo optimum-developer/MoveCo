@@ -1403,8 +1403,8 @@ ol.list3 {
 	border-radius: 100%;
 }
 
-/* 
-**buttons 
+/*
+**buttons
 */
 .theme_buttons a,
 .theme_button,
@@ -2465,7 +2465,7 @@ body.boxed {
  }
 
 .corner_article{
-	margin-top: -1.8%; 
+	margin-top: -1.8%;
     padding-top: 2%;
 }
 
@@ -2486,7 +2486,7 @@ body.boxed {
     -webkit-transition: all 200ms ease-in;
     -webkit-transform:1(1.1);
     -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(1.1);   
+    -ms-transform: scale(1.1);
     -moz-transition: all 200ms ease-in;
     -moz-transform: scale(1.1);
     transition: all 200ms ease-in;
@@ -3559,7 +3559,7 @@ body.boxed {
            background-color: rgb(152, 198, 13)
     }
 }
--webkit-keyframes blink {
+@-webkit-keyframes blink {
     0% {
            background-color: rgb(152, 198, 13)
     }
@@ -3591,7 +3591,7 @@ body.boxed {
     /* IE */
     animation:blink normal 1.5s infinite ease-in-out;
     /* Opera */
-}	
+}
 .ls h1,
 .ls h2,
 .ls h3,
@@ -5947,7 +5947,7 @@ section .intro_section .slide_description_wrapper {
 	margin: 40px 40px 20px;
 }
 
-/** 
+/**
 * intro_section styles
 */
 /* flexslider */
@@ -9532,7 +9532,7 @@ a.teaser-link:hover .teaser_icon i {
     -webkit-transition: all 200ms ease-in;
     -webkit-transform:1(1.1);
     -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(1.1);   
+    -ms-transform: scale(1.1);
     -moz-transition: all 200ms ease-in;
     -moz-transform: scale(1.1);
     transition: all 200ms ease-in;
@@ -9704,7 +9704,7 @@ a.teaser-link:hover .teaser_icon i {
 	font-size: 36px;
 	font-weight: 800;
 	line-height: 1;
-  /* dollar sign */	
+  /* dollar sign */
 }
 
 .features-list {
@@ -11504,8 +11504,8 @@ easy pie chart
 	margin-top: 0;
 }
 
-/* 
-timetable 
+/*
+timetable
 */
 #timetable span {
 	display: block;
@@ -11543,8 +11543,8 @@ timetable
 	color: #ffffff;
 }
 
-/* 
-totop 
+/*
+totop
 */
 #toTop {
 	bottom: 0;
@@ -12630,7 +12630,7 @@ a.theme-color-icon.border-icon:hover {
 		height: 100%;
 		overflow-y: auto;
 	}
-	
+
 	.modal.left .modal-body,
 	.modal.right .modal-body {
 		padding: 15px 15px 80px;
@@ -12644,11 +12644,11 @@ a.theme-color-icon.border-icon:hover {
 		     -o-transition: opacity 0.3s linear, left 0.3s ease-out;
 		        transition: opacity 0.3s linear, left 0.3s ease-out;
 	}
-	
+
 	.modal.left.fade.in .modal-dialog{
 		left: 0;
 	}
-        
+
 /*Right*/
 	.modal.right.fade .modal-dialog {
 		right: -320px;
@@ -12657,7 +12657,7 @@ a.theme-color-icon.border-icon:hover {
 		     -o-transition: opacity 0.3s linear, right 0.3s ease-out;
 		        transition: opacity 0.3s linear, right 0.3s ease-out;
 	}
-	
+
 	.modal.right.fade.in .modal-dialog {
 		right: 0;
 	}
