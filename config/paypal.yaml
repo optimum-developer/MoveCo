@@ -1,7 +1,7 @@
 development: &default
   mode: sandbox
-  client_id: AVKb3NvnEC2Bd7JVm3hTXQ-xGajQlXhVnQ9h0yNelTyrP5KD6ddQkX7_jEYjc_eDlCG5vPomwn3uknFB
-  client_secret: EJEW5Tgttr1CU7QLSK8hGosI_zHHrqv-OK2Vxjt9SYqTRdrFghkbk-NmRQ2JF-xANbc2irbqk3UgYlQq
+  client_id: AWS7CvetykFV9EQEwY0bnU9t31tagl9t7-xfRX2U1SkD76r0--HmHp6WhXCoEsq7QbDZKYETym7yybTY
+  client_secret: EAJ7C6vUlH-Q6N8TzZxjBUeLUavmR8GAy4RbIYmTrYZKKEwa0XjksC2HuSDENbqv5nqnR0bxDftut5cJ
   # # with Proxy
   # http_proxy: http://proxy-ipaddress:3129/
   # # with CA File
@@ -13,5 +13,5 @@ test:
   <<: *default
 production:
   mode: live
-  client_id: CLIENT_ID
-  client_secret: CLIENT_SECRET
+  client_id: AQN_fBisTB76iBtCIR3gJ2Z1HI6tVYpTDJoBQKmGKvkQA2LlPrnopb7iKyqRSjD3Y5nF-2Q1fZ822eyr
+  client_secret: ED_9IDwb7KF_q2_TaNX6yZTerSchO71PlMO96CRr4JfQEXxAY0pebuDuFXgOwx8uV3gEAcFbNOnVivEb
