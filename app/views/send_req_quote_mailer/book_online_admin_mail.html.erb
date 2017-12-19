@@ -10,39 +10,39 @@
      <h3>Last Name:</h3>
      <p><%=@user_details.last_name%></p>
    </div>
-   
+
    <div class="col-sm-4">
      <h3>Email Id:</h3>
      <p><%=@user_details.email%></p>
    </div>
    <div class="col-sm-4">
-     <h3>Phone:</h3>        
+     <h3>Phone:</h3>
      <p><%=@user_details.mobile_phone_number%></p>
    </div>
    <div class="col-sm-4">
-     <h3>Date to move:</h3>        
-     <p><%=@user_details.date_to_move%></p>
+     <h3>Date to move:</h3>
+     <p><%=@user_details.date_to_move.strftime('%a %d %b %Y')%></p>
    </div>
    <div class="col-sm-4">
-     <h3>Pick up Address:</h3>        
+     <h3>Pick up Address:</h3>
      <p><%=@user_details.move_from%></p>
    </div>
    </div><div class="col-sm-4">
-     <h3>Drop off Address:</h3>        
+     <h3>Drop off Address:</h3>
      <p><%=@user_details.move_to%></p>
    </div>
 
    <div class="col-sm-4">
-     <h3>Preferred Time Slot:</h3>        
+     <h3>Preferred Time Slot:</h3>
      <p><%=@user_details.time_slot%></p>
    </div>
    <div class="col-sm-4">
-     <h3>No. of Bedrooms:</h3>        
+     <h3>No. of Bedrooms:</h3>
      <p><%=@user_details.number_of_bedrooms%></p>
    </div>
-  
+
    <div class="col-sm-4">
-     <h3> Size of Truck:</h3>        
+     <h3> Size of Truck:</h3>
      <p><%=@user_details.size_of_truck%></p>
    </div>
  </div>

@@ -1,4 +1,7 @@
 class BookOnlineDetailsController < ApplicationController
+	def hook
+   @jhfjdhdjghjhgjdhgjdghdjhgdghjfhgdh
+  end
 	def create
     	@new_book_online_detail=BookOnlineDetail.new(contact_params)
      	if @new_book_online_detail.save

@@ -6,7 +6,7 @@ class BookOnlineDetail < ApplicationRecord
 	        cmd: "_xclick",
 	        upload: 1,
 	        return: return_path,
-	        invoice: id,
+	        invoice: 7877,
 	        amount: "10",
 	        item_name: "book",
 	        item_number: "1",
@@ -14,7 +14,7 @@ class BookOnlineDetail < ApplicationRecord
 					currency_code: "AUD",
 	        notify_url: "#{Rails.application.secrets.app_host}/hook"
 	    }
-	    return "https://www.paypal.com/cgi-bin/webscr?" + values.to_query
+	    return "https://www.sandbox.paypal.com/cgi-bin/webscr?" + values.to_query
   end
 
   def calculate_amout
