@@ -9,7 +9,7 @@
 					</h2>
 				</div>
 				<p>
-					Please fill out the following information and press the SUBMIT button. 
+					Please fill out the following information and press the SUBMIT button.
 				</p>
 				<div class="framed-heading">
 					<h5 class="section_header" style="font-size:30px ; color: #273754;">
@@ -17,7 +17,7 @@
 					</h5>
 				</div>
 
-				
+
 
 				<%= form_for @book_online, :html => {class: 'quote-form row topmargin_40', id:"book_online"} do |f| %>
 
@@ -26,12 +26,12 @@
 
 
 						<div class="bottommargin_10">
-							<label for="quote-first-name" class="sr-only">First Name
+							<label for="quote-first-name" class="sr-only" >First Name
 								<span class="required">*</span>
 							</label>
 							<div class="input-group">
 								<i class="flaticon-avatar highlight"></i>
-								<input type="text" aria-required="true" size="30" value="" name="book_online_detail[first_name]" id="quote-first-name" class="form-control" placeholder="First Name">
+								<input type="text" aria-required="true" size="30" value="" name="book_online_detail[first_name]" id="quote-first-name" class="form-control" placeholder="First Name" required>
 							</div>
 						</div>
 
@@ -59,7 +59,7 @@
 							<label for="quote-home-phone" class="sr-only">Home phone</label>
 							<div class="input-group">
 								<i class="flaticon-phone-call highlight"></i>
-								<input type="text" size="30" value="" name="book_online_detail[home_phone_number]"  id="quote-home-phone" class="form-control" placeholder="Home phone">
+								<input type="number" size="30" value="" name="book_online_detail[home_phone_number]"  id="quote-home-phone" class="form-control" placeholder="Home phone">
 							</div>
 						</div>
 
@@ -67,7 +67,7 @@
 							<label for="quote-mobile-phone2" class="sr-only">Mobile phone</label>
 							<div class="input-group">
 								<i class="flaticon-phone-call highlight"></i>
-								<input type="text" size="30" value="" name="book_online_detail[mobile_phone_number]"  id="quote-mobile-phone2" class="form-control" placeholder="Mobile phone">
+								<input type="number" size="30" value="" name="book_online_detail[mobile_phone_number]"  id="quote-mobile-phone2" class="form-control" placeholder="Mobile phone" required>
 							</div>
 						</div>
 
@@ -144,7 +144,7 @@
 							<label for="quote-cargo" class="sr-only">Number of Bedrooms</label>
 							<div class="input-group select-group">
 								<i class="fa fa-home" aria-hidden="true"></i>
-								<select aria-required="true" id="quote-cargo" name="book_online_detail[number_of_bedrooms]" class="choice form-control">
+								<select aria-required="true" id="quote-cargo" name="book_online_detail[number_of_bedrooms]" class="choice form-control" >
 									<option value="" selected data-default>Number of Bedrooms</option>
 									<option value="type1">1-2 BEDROOMS</option>
 									<option value="type2">2-3 BEDROOMS</option>
@@ -159,7 +159,7 @@
 							<label for="quote-cargo" class="sr-only">Size of Truck</label>
 							<div class="input-group select-group">
 								<i class="fa fa-truck" aria-hidden="true"></i>
-								<select aria-required="true" id="quote-cargo" name="book_online_detail[size_of_truck]" class="choice form-control">
+								<select aria-required="true" id="quote-cargo" name="book_online_detail[size_of_truck]" class="choice form-control" required>
 									<option value="" selected data-default>Size of Truck</option>
 									<option value="1">4.5T/2MEN($80/hr)</option>
 									<option value="2">6T/2MEN($90/hr)</option>
@@ -189,13 +189,13 @@
 							I have read and Agree to the Terms & Conditions.
 							</span>
 
- 
+
 						</p>
 					</div>
 
 
 					<div class="col-sm-12 text-center">
-						<button onclick="submit_form()" type="button" id="quote_submit" name="quote_submit" class="theme_button color2 topmargin_10">Submit and Pay</button>
+						<button onclick="submit_form()" type="submit" id="quote_submit" name="quote_submit" class="theme_button color2 topmargin_10">Submit and Pay</button>
 					</div>
 				<%end%>
 
@@ -206,13 +206,13 @@
 <script type="text/javascript">
 	function submit_form()
 	{
-		
+
         if (!$('#terms_and_condition').is(':checked')) {
             alert("Please accept terms and conditions");
         }
-        else
-        {
-        	$("#book_online").submit();
-        }
+        // else
+        // {
+        // 	$("#book_online").submit();
+        // }
 	}
 </script>

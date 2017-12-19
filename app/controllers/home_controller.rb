@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   # layout 'layout_basic'
-
+  layout false, :only => :coming_soon 
   
   def index
     @new_req=RequestQuote.new
@@ -76,6 +76,9 @@ class HomeController < ApplicationController
   end
 
   def why_us
+  end
+
+  def coming_soon    
   end
 
   # def tryit

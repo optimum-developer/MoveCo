@@ -2,18 +2,19 @@ class BookOnlineDetail < ApplicationRecord
 	def paypal_url(return_path)
 		amount_to_pay =  calculate_amout.to_s
 	    values = {
-	        business: "amandeepk@codegaragetech.com",
+	        business: "info@eaglemovers.com.au",
 	        cmd: "_xclick",
 	        upload: 1,
 	        return: return_path,
 	        invoice: id,
-	        amount: amount_to_pay,
+	        amount: "10",
 	        item_name: "book",
 	        item_number: "1",
 	        quantity: '1',
+					currency_code: "AUD",
 	        notify_url: "#{Rails.application.secrets.app_host}/hook"
 	    }
-	    return "https://www.sandbox.paypal.com/cgi-bin/webscr?" + values.to_query
+	    return "https://www.paypal.com/cgi-bin/webscr?" + values.to_query
   end
 
   def calculate_amout
@@ -31,7 +32,10 @@ class BookOnlineDetail < ApplicationRecord
 	else
 	  amount = "error"
 	end
-	discounted_amount = amount - amount * 10 / 100
-	return discounted_amount
+	# discounted_amount = amount - amount * 10 / 100
+	# return discounted_amount
+	# amount_multiply=amount*2
+	# return amount_multiply
+	return amount
   end
 end
