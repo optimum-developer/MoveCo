@@ -1,13 +1,12 @@
 class SendReqQuoteMailer < ApplicationMailer
   	default from: 'info@eaglemovers.com.au'
-	
+
 	def send_quote_to_user(user_email,subject,req_name)
 		@u_name=req_name
 		mail(:to=>user_email,:subject=>"FREE QUOTE(1300 EAGLE MOVERS)")
 	end
 
 	def send_quote_to_admin(id_number,user_email,description,req_name,req_date_to_move,req_phone_number,req_move_from,req_move_to,u_number)
-		debugger
 		@id_number=id_number
 		@u_email=user_email
 		@u_name=req_name
@@ -43,6 +42,6 @@ class SendReqQuoteMailer < ApplicationMailer
 	def book_online_admin_mail(user_details)
 		@user_details=user_details
 		mail(:to=>"info@eaglemovers.com.au",:subject=>"Job Confirmation #{@user_details.unique_book_number}")
-	end		
+	end
 
 end
