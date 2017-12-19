@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root to: 'home#coming_soon'
   # root to: 'home#index'
-  get 'home/about_us'=>'home#about_us' 
+  get 'home/index'=>'home#index' 
+  get 'home/about_us'=>'home#about_us'
   get 'home/service'=>'home#service'
   get 'home/service_residential_moving'=>'home#service_residential_moving'
   get 'home/service_office_moving'=>'home#service_office_moving'
@@ -35,7 +36,7 @@ Rails.application.routes.draw do
   resources :book_online_details
 
 
-  
+
 
 
 
