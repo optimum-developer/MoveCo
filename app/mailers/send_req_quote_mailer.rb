@@ -16,7 +16,7 @@ class SendReqQuoteMailer < ApplicationMailer
 		@u_move_to=req_move_to
 		@u_phone=req_phone_number
 
-		mail(:to=>"info@eaglemovers.com.au",:subject=>"Request for Quote #{u_number}")
+		mail(:to=>"birparam95@gmail.com",:subject=>"Request for Quote #{u_number}")
 	end
 
 	def send_contact_response(email,name)
@@ -41,7 +41,7 @@ class SendReqQuoteMailer < ApplicationMailer
 
 	def book_online_admin_mail(user_details)
 		@user_details=user_details
-		mail(:to=>"info@eaglemovers.com.au",:subject=>"Job Confirmation #{@user_details.unique_book_number}")
+		mail(:to=>"birparam95@gmail.com",:subject=>"Job Confirmation #{@user_details.unique_book_number}")
 	end
 
 end
