@@ -1,5 +1,5 @@
 <%= form_for(@new_req) do |f| %>
-	
+
 	<div class="with_padding">
 
 			<div class="form-group">
@@ -57,7 +57,7 @@
 					<span class="required">*</span>
 				</label>
 				<div class="input-group">
-					
+
 					<i class="fa fa-truck" ></i>
 					<input type="text" aria-required="true" size="30" value="" name="request_quote[move_to]" id="quote-name" class="form-control" placeholder="move to" required>
 				</div>
@@ -78,12 +78,13 @@
 			<div class="text-center topmargin_40">
 				<button type="button" onclick="save_quote_request()" id="quote_submit" name="quote_submit" class="theme_button color2">Send request</button>
 			</div>
-		
+
 
 	</div>
 <%end%>
 <script type="text/javascript">
 	function save_quote_request() {
+		debugger
 		// alert("wewhgyfg")
     	$.ajax({
                 type: "POST",
@@ -96,22 +97,21 @@
 
                 success: function(data) {
                 	if (data["status_notify"]=="true"){
-						$.notify("Thanks for contacting us. We will contact you shortly.", "success");                                    
+						$.notify("Thanks for contacting us. We will contact you shortly.", "success");
 						$("#new_request_quote").trigger('reset');
 					}
 
                 },
                 error: function(err){
 	                	$.notify("Something Went Wrong! Please Try Again");
-							                                    
-					                                     
-                	
+
+
+
                 }
 
                 })
 
 	}
-	
+
 
 </script>
-
