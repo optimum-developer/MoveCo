@@ -1,6 +1,6 @@
 development: &default
   mode: sandbox
-  client_id: AWS7CvetykFV9EQEwY0bnU9t31tagl9t7-xfRX2U1SkD76r0--HmHp6WhXCoEsq7QbDZKYETym7yybTY
+   client_id: AWS7CvetykFV9EQEwY0bnU9t31tagl9t7-xfRX2U1SkD76r0--HmHp6WhXCoEsq7QbDZKYETym7yybTY
   client_secret: EAJ7C6vUlH-Q6N8TzZxjBUeLUavmR8GAy4RbIYmTrYZKKEwa0XjksC2HuSDENbqv5nqnR0bxDftut5cJ
   # # with Proxy
   # http_proxy: http://proxy-ipaddress:3129/
