@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  root to: 'home#coming_soon'
-  # root to: 'home#index'
+  # root to: 'home#coming_soon'
+  root to: 'home#index'
 
-  get 'home/index'=>'home#index' 
+  get 'home/index'=>'home#index'
   get 'home/about_us'=>'home#about_us'
   get 'home/service'=>'home#service'
   get 'home/service_residential_moving'=>'home#service_residential_moving'
@@ -27,6 +27,8 @@ Rails.application.routes.draw do
   get 'home/shortcodes_icons'=>'home#shortcodes_icons'
   get 'home/contact'=>'home#contact'
   get 'home/book_online'=>'home#book_online_detail'
+  get 'home/pay_success_email'=>"book_online_details#pay_success_email"
+  post 'payment_notify'=>"payment_notifications#create"
 
   get 'home/why_us'=>'home#why_us'
   get 'home/pricing'=>'home#pricing'

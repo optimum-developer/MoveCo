@@ -5,16 +5,15 @@ class BookOnlineDetail < ApplicationRecord
 	        business: "info@eaglemovers.com.au",
 	        cmd: "_xclick",
 	        upload: 1,
-	        return: return_path,
-	        invoice: 7877,
-	        amount: "10",
+					invoice: id,
+	        amount: "1",
 	        item_name: "book",
 	        item_number: "1",
 	        quantity: '1',
 					currency_code: "AUD",
-	        notify_url: "#{Rails.application.secrets.app_host}/hook"
 	    }
-	    return "https://www.sandbox.paypal.com/cgi-bin/webscr?" + values.to_query
+
+	    return "https://www.paypal.com/cgi-bin/webscr?" + values.to_query
   end
 
   def calculate_amout
