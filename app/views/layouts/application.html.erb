@@ -7,7 +7,7 @@
 <!--<![endif]-->
 
 <head>
-<title>MoveCo</title>
+<title>Eagle Movers</title>
 <meta charset="utf-8">
 <!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/csshake-little.css">
 
-	
+
 
 <script src="/assets/vendor/modernizr-2.6.2.min.js"></script>
 <script src="//code.jquery.com/jquery-1.12.4.js"></script>
@@ -146,7 +146,7 @@
 <div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
 	<div class="fw-messages-wrap ls with_padding">
 		<!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
-		<!--		
+		<!--
 	<ul>
 		<li>Message To User</li>
 	</ul>
@@ -191,7 +191,7 @@
 					</div>
 				</div>
 	    </div>
-			
+
 			<!--  -->
 			 <div class="row" style="">
 			    <div class="col-md-5" style="padding-right: 4%;  padding-left: 7%;margin-bottom:0;" >
@@ -232,10 +232,10 @@
 
   <!--  -->
 		<!-- logo demo starts-->
-		
+
 		<!-- logo demo ends -->
 		<!--  -->
-	
+
 			<!--  -->
 		</section>
 
@@ -252,12 +252,12 @@
 								<li id="home_page_about_us" class="home_page_about_us">
 									<a  href="<%=home_about_us_path%>">About Us</a>
 								</li>
-								
+
 								<li id="home_page_services" class="home_page_services" style="">
 									<a href="#">Services</a>
 									<ul>
-										
-										
+
+
 										<li>
 											<a href="<%=home_service_residential_moving_path%>">RESIDENTIAL MOVING</a>
 										</li>
@@ -293,7 +293,7 @@
 									<a href="<%= home_contact_path%>">Contact us</a>
 								</li>
 
-								
+
 								<!-- eof contacts -->
 							</ul>
 						</nav>
@@ -317,19 +317,19 @@
 						<div class="col-md-4 col-sm-12">
 							<h3 class="widget-title highlight2">About 1300 eagle movers</h3>
 							<p class="topmargin_40 bottommargin_30 p_justify">
-								We have taken the initiative to start the company in order to facilitate transport services for various needs. We believe in the importance of operating as independent carriers, 
-								responding quickly to your needs with prompt, 
+								We have taken the initiative to start the company in order to facilitate transport services for various needs. We believe in the importance of operating as independent carriers,
+								responding quickly to your needs with prompt,
 								effective and global solutions.
 							</p>
-							
+
 						</div>
 
 						<div class="col-md-4 col-sm-6">
 							<div class="widget widget_recent_entries">
 								<h3 class="widget-title highlight2">Quick Contact</h3>
 								<p class="topmargin_40 bottommargin_30" style="line-height: 30px;">
-									Please call 1300 324 536 (we are available 24*7) 
-									or write at 
+									Please call 1300 324 536 (we are available 24*7)
+									or write at
 									Email:info@eaglemovers.com.au
 
 								</p>
@@ -359,7 +359,7 @@
 								Copyright 2017 @ 1300 EAGLE MOVERS
 							</p>
 						</div>
-						
+
 						<div id="dial_number_icon" class="col-md-1 col-sm-2 dial_number" style="display: none;
     text-align: right; padding-top: 12px; position: fixed; right: -6px; bottom: 18px; z-index: 1001;">
 								<!-- <img  src="/assets/telephone _icon.png"> -->
@@ -369,7 +369,7 @@
 
 							</a>
 						</div>
-							
+
 					</div>
 				</div>
 			</section>
@@ -382,7 +382,7 @@
 	<script src="/assets/compressed.js"></script>
 	<script src="/assets/main.js"></script>
     <script src="/assets/notify.js"></script>
-    
+
 
 
 	<script type="text/javascript">
@@ -399,10 +399,10 @@
 			    document.getElementById("dial_number_icon").style.display = "block";
 			}
 		});
-		
+
 		 // slider_div_default_width = (15/100*($(window).width())).toString() + "px"
    //      $('#hiddenPanel').css("width", slider_div_default_width);
-         
+
 		function call_me_back_details() {
 			if($("#phone_number").val() !="" || $("#phone_number_2").val() !=""){
 			// alert("wewhgyfg")
@@ -410,7 +410,7 @@
 			{
 				form_data = $("#call_me_back").serialize();
 			}
-			else 
+			else
 			{
 				form_data = $("#call_me_back_2").serialize();
 			}
@@ -422,7 +422,7 @@
 		                data: form_data,
 		                success: function(data) {
 		                	if(data["notice_status"]=="true"){
-								$.notify("Thanks for your request. We will get back to you shortly.", "success");                                    
+								$.notify("Thanks for your request. We will get back to you shortly.", "success");
 		                		$("#phone_number").val("")
 		                		$("#phone_number_2").val("")
 		                	}
@@ -432,7 +432,7 @@
 		                		$("#phone_number").val("")
 		                		$("#phone_number_2").val("")
 		                	}
-		                	
+
 		                },
 		                error: function(err){
 		                	$.notify("Something Went Wrong! Please Try Again");
@@ -445,7 +445,7 @@
         $( "#toggle" ).toggle( "slide" );
         });
 
-       
+
         var speed = 300;
         $('#close-bar').on('click', function(){
         	  if( $(window).width() > 948)
@@ -453,7 +453,7 @@
         			slider_div_width = ($(window).width()/4).toString() + "px"
         			slider_closing_div_width = (($(window).width()/4) + 5).toString() + "px"
         			$('#hiddenPanel').css("padding-top", "1%");
-        	  }	
+        	  }
         	  else if($(window).width() < 948 && $(window).width() > 475)
         	  {
         	  	slider_div_width = ($(window).width()/2).toString() + "px"
