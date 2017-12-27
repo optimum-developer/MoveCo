@@ -11,7 +11,7 @@ class SendReqQuoteMailer < ApplicationMailer
 		@u_email=user_email
 		@u_name=req_name
 		@u_des=description
-		@u_date_to_move=req_date_to_move
+		@u_date_to_move=req_date_to_move.strftime('%a %d %b %Y')
 		@u_move_from=req_move_from
 		@u_move_to=req_move_to
 		@u_phone=req_phone_number
