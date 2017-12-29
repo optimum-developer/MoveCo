@@ -1,9 +1,9 @@
 class SendReqQuoteMailer < ApplicationMailer
-  	default from: 'info@eaglemovers.com.au'
+  	default from: '1300 EAGLE MOVERS<info@eaglemovers.com.au>'
 
 	def send_quote_to_user(user_email,subject,req_name)
 		@u_name=req_name
-		mail(:to=>user_email,:subject=>"FREE QUOTE(1300 EAGLE MOVERS)")
+		mail(:to=>user_email,:subject=>"Online Quote Request")
 	end
 
 	def send_quote_to_admin(id_number,user_email,description,req_name,req_date_to_move,req_phone_number,req_move_from,req_move_to,u_number)
@@ -36,12 +36,13 @@ class SendReqQuoteMailer < ApplicationMailer
 	def booking_successful_to_user(user_email,user_details)
 		@user_details=user_details
 		# @u_name=user_name
-		mail(:to=>user_email,:subject=>"Booking Successful(1300 EAGLE MOVERS)")
+		mail(:to=>user_email,:subject=>"BOOKING CONFIRMATION(#{@user_details.unique_book_number})
+")
 	end
 
 	def book_online_admin_mail(user_details)
 		@user_details=user_details
-		mail(:to=>"info@eaglemovers.com.au",:subject=>"Job Confirmation #{@user_details.unique_book_number}")
+		mail(:to=>"info@eaglemovers.com.au",:subject=>"BOOKING Confirmation #{@user_details.unique_book_number}")
 	end
 
 end

@@ -1,51 +1,86 @@
 
-<h3><b>Hi <%=@user_details.first_name%> </b><br>
-	We are pleased to serve you for your moving needs. Below are your confirmation details:
-	<div class="container">
- <div class="row">
-   <div class="col-sm-4">
-     <h3>First Name:</h3>
-     <p><%=@user_details.first_name%></p>
-   </div>
-   <div class="col-sm-4">
-     <h3>Last Name:</h3>
-     <p><%=@user_details.last_name%></p>
-   </div>
 
-   <div class="col-sm-4">
-     <h3>Email Id:</h3>
-     <p><%=@user_details.email%></p>
-   </div>
-   <div class="col-sm-4">
-     <h3>Phone:</h3>
-     <p><%=@user_details.mobile_phone_number%></p>
-   </div>
-   <div class="col-sm-4">
-     <h3>Date to move:</h3>
-     <p><%=@user_details.date_to_move.strftime('%a %d %b %Y')%></p>
-   </div>
-   <div class="col-sm-4">
-     <h3>Pick up Address:</h3>
-     <p><%=@user_details.move_from%></p>
-   </div>
-   </div><div class="col-sm-4">
-     <h3>Drop off Address:</h3>
-     <p><%=@user_details.move_to%></p>
-   </div>
+<p>Hi<b> <%=@user_details.first_name%>,</b></p>
+<p>Thanks for choosing us to serve you. Your booking has been confirmed, please find below the details:
+</p>
+<br>
+<b>First Name:</b>
+<br>
+<p><%=@user_details.first_name%></p>
+<br>
+<b>Last Name:</b>
+<br>
 
-   <div class="col-sm-4">
-     <h3>Preferred Time Slot:</h3>
-     <p><%=@user_details.time_slot%></p>
-   </div>
-   <div class="col-sm-4">
-     <h3>No. of Bedrooms:</h3>
-     <p><%=@user_details.number_of_bedrooms%></p>
-   </div>
+<p><%=@user_details.last_name%></p>
+<br>
+<b>Email Id:</b>
+<br>
 
-   <div class="col-sm-4">
-     <h3> Size of Truck:</h3>
-     <p><%=@user_details.size_of_truck%></p>
-   </div>
- </div>
-</div>
-</h3>
+<p><%=@user_details.email%></p>
+<br>
+
+<b>Home Phone:</b>
+<br>
+
+<p><%=@user_details.home_phone_number%></p>
+<br>
+<b>Mobile Phone:</b>
+<br>
+<p><%=@user_details.mobile_phone_number%></p>
+<br>
+<b>Date to move:</b>
+<br>
+<p><%=@user_details.date_to_move.strftime('%a %d %b %Y')%></p>
+<br>
+<b>Pick up Address:</b>
+<br>
+<p><%=@user_details.move_from%></p>
+<br>
+<b>Drop off Address:</b>
+<br>
+<p><%=@user_details.move_to%></p>
+<br>
+<b>Town/City:</b>
+<br>
+<p><%=@user_details.city%></p>
+<br>
+<b>State/Country:</b>
+<br>
+<p><%=@user_details.country%></p>
+<br>
+<b>Zipcode:</b>
+<br>
+<p><%=@user_details.zipcode%></p>
+<br>
+
+<b>Preferred Time Slot:</b>
+<br>
+
+	<p><%=@user_details.time_slot%></p>
+<b>No. of Bedrooms:</b>
+<br>
+
+	<p><%=@user_details.number_of_bedrooms%></p>
+	<br>
+
+<b> Size of Truck:</b>
+<br>
+
+	<p><%=@user_details.size_of_truck%></p>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+<p>We will let you know in advance, if there is any change in time slot.<br>Incase of any enquiries, feel free to contact us at 1300324536.</p>
+<br>
+<br>
+<p>Thanks & Regards,
+<br>1300 EAGLE MOVERS</p>

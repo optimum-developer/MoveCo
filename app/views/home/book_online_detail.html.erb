@@ -136,7 +136,7 @@
 							<label for="quote-town" class="sr-only">Date to move</label>
 							<div class="input-group">
 								<i class="fa fa-calendar" aria-hidden="true"></i>
-								<input size="30" value="" onfocus="(this.type='date')" name="book_online_detail[date_to_move]" id="quote-town" class="form-control" placeholder="Date to move" style="color: currentColor;">
+								<input size="30" value="" onfocus="(this.type='date')" name="book_online_detail[date_to_move]" id="quote-town" class="form-control" placeholder="Date to move" style="color: currentColor;" required>
 
 							</div>
 						</div>
@@ -224,9 +224,9 @@
 							* $10 charged separately for each flight of stairs.<br>
 							* $100 charged separately for Upright Piano, if any(ground floor to ground floor).<br>
 							* No cancellation fee applicable, if informed 24hours prior to booked date.<br>
-							<input id="terms_and_condition" type="checkbox">
+							<input id="terms_and_condition" type="checkbox" required>
 							<span style="padding-left: 20px;">
-							I have read and Agree to the 
+							I have read and Agree to the
 							<a id="myBtn" style="cursor: pointer;">
 							Terms & Conditions.</a>
 							</span>
@@ -263,6 +263,7 @@
 
 	function submit_form()
 	{
+		debugger
 
         if (!$('#terms_and_condition').is(':checked')) {
             alert("Please accept terms and conditions");
@@ -282,7 +283,7 @@ var btn = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
+// When the user clicks the button, open the modal
 btn.onclick = function() {
     modal.style.display = "block";
 }
