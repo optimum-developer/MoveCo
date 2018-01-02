@@ -1,3 +1,7 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/additional-methods.js"></script>
+<script src="/javascripts/free-trade/bootstrap.js"></script>
 <style>
 /* The Modal (background) */
 .modal {
@@ -37,6 +41,20 @@
     text-decoration: none;
     cursor: pointer;
 }
+input.failed_validation_error{
+	border-color: darkred;
+}
+select.failed_validation_error{
+	border-color: darkred;
+}
+label.failed_validation_error{
+	font-size: 64%;
+	float: right;
+	color: darkred;
+}
+p > label.failed_validation_error{
+	display: none !important;
+}
 </style>
 <%=render partial: "free_quote"%>
 <section class="ls section_padding_top_100 section_padding_bottom_75 columns_margin_bottom_30">
@@ -70,7 +88,7 @@
 							</label>
 							<div class="input-group">
 								<i class="flaticon-avatar highlight"></i>
-								<input type="text" aria-required="true" size="30" value="" name="book_online_detail[first_name]" id="quote-first-name" class="form-control" placeholder="First Name" required>
+								<input type="text" aria-required="true" size="30" value="" name="book_online_detail[first_name]" id="quote-first-name" class="required form-control" placeholder="First Name">
 							</div>
 						</div>
 
@@ -90,7 +108,7 @@
 							</label>
 							<div class="input-group">
 								<i class="flaticon-envelope highlight"></i>
-								<input type="text" aria-required="true" size="30" value="" name="book_online_detail[email]"  id="quote-email" class="form-control" placeholder="E-mail" required>
+								<input type="text" aria-required="true" size="30" value="" name="book_online_detail[email]"  id="quote-email" class="form-control" placeholder="E-mail">
 							</div>
 						</div>
 
@@ -106,7 +124,7 @@
 							<label for="quote-mobile-phone2" class="sr-only">Mobile phone</label>
 							<div class="input-group">
 								<i class="flaticon-phone-call highlight"></i>
-								<input type="number" size="30" value="" name="book_online_detail[mobile_phone_number]"  id="quote-mobile-phone2" class="form-control" placeholder="Mobile phone" required>
+								<input type="number" size="30" value="" name="book_online_detail[mobile_phone_number]"  id="quote-mobile-phone2" class="form-control" placeholder="Mobile phone">
 							</div>
 						</div>
 
@@ -135,7 +153,7 @@
 							<label for="quote-town" class="sr-only">Date to move</label>
 							<div class="input-group">
 								<i class="fa fa-calendar" aria-hidden="true"></i>
-								<input size="30" value="" onfocus="(this.type='date')" name="book_online_detail[date_to_move]" id="quote-town" class="form-control" placeholder="Date to move" style="color: currentColor;" required>
+								<input size="30" value="" onfocus="(this.type='date')" name="book_online_detail[date_to_move]" id="quote-town" class="form-control" placeholder="Date to move" style="color: currentColor;">
 
 							</div>
 						</div>
@@ -144,7 +162,7 @@
 							<label for="quote-town" class="sr-only">Town / City</label>
 							<div class="input-group">
 								<i class="flaticon-house highlight"></i>
-								<input type="text" size="30" value="" name="book_online_detail[city]" id="quote-town" class="form-control" placeholder="Town / City">
+								<input type="text" size="30" value="" name="book_online_detail[city]" id="quote-city" class="form-control" placeholder="Town / City">
 							</div>
 						</div>
 
@@ -153,7 +171,8 @@
 							<label for="quote-country" class="sr-only">State / Country</label>
 							<div class="input-group">
 								<i class="flaticon-placeholder highlight"></i>
-								<input type="text" size="30" value="" name="book_online_detail[country]"id="quote-country" class="form-control" placeholder="State / Country">
+								<input type="text" size="30" value="" name="book_online_detail[country]"
+								id="quote-country" class="form-control" placeholder="State / Country">
 							</div>
 						</div>
 
@@ -169,7 +188,7 @@
 							<label for="quote-cargo" class="sr-only">Preffered Time Slot</label>
 							<div class="input-group select-group">
 								<i class="fa fa-calendar-times-o" aria-hidden="true"></i>
-								<select aria-required="true" id="quote-cargo" name="book_online_detail[time_slot]" class="choice form-control">
+								<select aria-required="true" id="quote-time_slot" name="book_online_detail[time_slot]" class="choice form-control">
 									<option value="" selected data-default>Preffered Time Slot</option>
 									<option value="8:00 AM">8:00 AM</option>
 									<option value="12 NOON">12 NOON</option>
@@ -183,7 +202,7 @@
 							<label for="quote-cargo" class="sr-only">Number of Bedrooms</label>
 							<div class="input-group select-group">
 								<i class="fa fa-home" aria-hidden="true"></i>
-								<select aria-required="true" id="quote-cargo" name="book_online_detail[number_of_bedrooms]" class="choice form-control" >
+								<select aria-required="true" id="quote-bedrooms" name="book_online_detail[number_of_bedrooms]" class="choice form-control" >
 									<option value="" selected data-default>Number of Bedrooms</option>
 									<option value="type1">1-2 BEDROOMS</option>
 									<option value="type2">2-3 BEDROOMS</option>
@@ -198,7 +217,7 @@
 							<label for="quote-cargo" class="sr-only">Size of Truck</label>
 							<div class="input-group select-group">
 								<i class="fa fa-truck" aria-hidden="true"></i>
-								<select aria-required="true" id="quote-cargo" name="book_online_detail[size_of_truck]" class="choice form-control" required>
+								<select aria-required="true" id="quote-truck" name="book_online_detail[size_of_truck]" class="choice form-control" >
 									<option value="" selected data-default>Size of Truck</option>
 									<option value="1">4.5T/2MEN($80/hr)</option>
 									<option value="2">6T/2MEN($90/hr)</option>
@@ -223,12 +242,16 @@
 							* $10 charged separately for each flight of stairs.<br>
 							* $100 charged separately for Upright Piano, if any(ground floor to ground floor).<br>
 							* No cancellation fee applicable, if informed 24hours prior to booked date.<br>
-							<input id="terms_and_condition" type="checkbox" required>
+							<input id="terms_and_condition" type="checkbox" name="book_online_detail[terms_and_condition]" >
 							<span style="padding-left: 20px;">
 							I have read and Agree to the
 							<a id="myBtn" style="cursor: pointer;">
 							Terms & Conditions.</a>
 							</span>
+							<br/>
+							<label id="t_c_error" style="font-size: 64%;color: darkred;display:none">
+								Please accept terms and conditions.
+							</label>
 							<div id="myModal" class="modal" style="    z-index: 9999;">
 							  <div class="modal-content">
 							    <span onclick="close_modal()" class="close">&times;</span>
@@ -238,8 +261,6 @@
 							  </div>
 
 							</div>
-
-
 						</p>
 					</div>
 
@@ -255,23 +276,83 @@
 </section>
 <script type="text/javascript">
 
+
 	function close_modal()
 	{
 		modal.style.display = "none";
 	}
 
+
+
+
 	function submit_form()
 	{
 
-        if (!$('#terms_and_condition').is(':checked')) {
-            alert("Please accept terms and conditions");
-        }
-        // else
-        // {
-        // 	$("#book_online").submit();
-        // }
 	}
-
+	$("#book_online").validate({
+			  errorClass: "failed_validation_error",
+              rules: {
+                // RK: NOTE: strange bug requires that remote is last to be checked
+                "book_online_detail[first_name]": {
+                  required: true,
+                },
+                "book_online_detail[last_name]" :{
+                	required: true,
+                },
+				"book_online_detail[email]" :{
+					required: true,
+					email: true
+				},
+				"book_online_detail[home_phone_number]" :{
+					required: true,
+				},
+				"book_online_detail[mobile_phone_number]" :{
+					required: true,
+				},
+				"book_online_detail[move_from]" :{
+					required: true,
+				},
+				"book_online_detail[move_to]" :{
+					required: true,
+				},
+				"book_online_detail[date_to_move]" :{
+					required: true,
+				},
+				"book_online_detail[city]" :{
+					required: true,
+				},
+				"book_online_detail[country]" :{
+					required: true,
+				},
+				"book_online_detail[zipcode]" :{
+					required: true,
+				},
+				"book_online_detail[time_slot]" :{
+					required: true,
+				},
+				"book_online_detail[number_of_bedrooms]" :{
+					required: true,
+				},
+				"book_online_detail[size_of_truck]" :{
+					required: true,
+				},
+				"book_online_detail[terms_and_condition]" :{
+					laxEmail: true,
+				},
+              },
+            });
+			jQuery.validator.addMethod("laxEmail", function(value, element) {
+				if ((document.getElementById("terms_and_condition").checked) == false)
+				{
+			  		$("#t_c_error").show();
+			  		return false;
+				}
+				else
+				{
+					$("#t_c_error").hide();
+					return true;
+				}
+			}, 'msg');
 	// Get the modal
 var modal = document.getElementById('myModal');
 
