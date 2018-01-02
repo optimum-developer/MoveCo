@@ -1,4 +1,8 @@
 class BookOnlineDetail < ApplicationRecord
+	validates :email, presence: true
+	validates :first_name, presence: true
+  validates :mobile_phone_number, presence: true
+  validates :date_to_move, presence: true
 	def paypal_url(return_path)
 		amount_to_pay =  calculate_amout.to_s
 	    values = {

@@ -58,7 +58,6 @@
 				</div>
 
 
-
 				<%= form_for @book_online, :html => {class: 'quote-form row topmargin_40', id:"book_online"} do |f| %>
 
 
@@ -91,7 +90,7 @@
 							</label>
 							<div class="input-group">
 								<i class="flaticon-envelope highlight"></i>
-								<input type="text" aria-required="true" size="30" value="" name="book_online_detail[email]"  id="quote-email" class="form-control" placeholder="E-mail">
+								<input type="text" aria-required="true" size="30" value="" name="book_online_detail[email]"  id="quote-email" class="form-control" placeholder="E-mail" required>
 							</div>
 						</div>
 
@@ -263,7 +262,6 @@
 
 	function submit_form()
 	{
-		debugger
 
         if (!$('#terms_and_condition').is(':checked')) {
             alert("Please accept terms and conditions");
