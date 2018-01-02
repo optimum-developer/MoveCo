@@ -4,10 +4,11 @@ class PaymentNotificationsController < ApplicationController
     response = validate_IPN_notification(request.raw_post)
     case response
     when "VERIFIED"
-      @new_book_online_detail=BookOnlineDetail.find(params["invoice"].to_i)
-			SendReqQuoteMailer.booking_successful_to_user(@new_book_online_detail.email,@new_book_online_detail).deliver
-			SendReqQuoteMailer.book_online_admin_mail(@new_book_online_detail).deliver
-
+      if params["payment_status"]=="Completed"
+        @new_book_online_detail=BookOnlineDetail.find(params["invoice"].to_i)
+  			SendReqQuoteMailer.booking_successful_to_user(@new_book_online_detail.email,@new_book_online_detail).deliver
+  			SendReqQuoteMailer.book_online_admin_mail(@new_book_online_detail).deliver
+      end
       # check that paymentStatus=Completed
       # check that txnId has not been previously processed
       # check that receiverEmail is your Primary PayPal email
@@ -23,7 +24,7 @@ class PaymentNotificationsController < ApplicationController
   end
   protected
   def validate_IPN_notification(raw)
-    uri = URI.parse('https://ipnpb.sandbox.paypal.com/cgi-bin/webscr?cmd=_notify-validate')
+    uri = URI.parse('https://ipnpb.paypal.com/cgi-bin/webscr?cmd=_notify-validate')
     http = Net::HTTP.new(uri.host, uri.port)
     http.open_timeout = 60
     http.read_timeout = 60
