@@ -5,34 +5,20 @@ class RequestQuotesController < ApplicationController
   end
 
 	def create
-    
-     @new_req=RequestQuote.new(req_quote_params)
+        @new_req=RequestQuote.new(req_quote_params)
         if @new_req.save
           @new_req.update(:unique_quote_number=>"RQ#{@new_req.id}")
-          user_email=@new_req.email
-         	description=@new_req.description
-            req_name=@new_req.name
-            req_date_to_move=@new_req.date_to_move
-            req_phone_number=@new_req.phone_number
-            req_move_from=@new_req.move_from
-            req_move_to=@new_req.move_to
-            u_number=@new_req.unique_quote_number
-         	SendReqQuoteMailer.send_quote_to_user(user_email,description,req_name).deliver
-            SendReqQuoteMailer.send_quote_to_admin(@new_req.id,user_email,description,req_name,req_date_to_move,req_phone_number,req_move_from,req_move_to,u_number).deliver
-            respond_to do |format|
-                format.json { render :json =>{status: 200,status_notify:"true"}  }
-                format.html { }
-
-            end
+          respond_to do |format|
+              format.json { render :json =>{status: 200,status_notify:"true",user: @new_req.id}  }
+              format.html { }
+          end
+          SendEmailUserAdminJob.perform_later(@new_req.id)
         else
             respond_to do |format|
                 format.json { render :json =>{status: 200,status_notify:"false"}  }
                 format.html { }
-
             end
-        
         end
-
   	end
 
     def new
