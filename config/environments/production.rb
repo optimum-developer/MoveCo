@@ -110,9 +110,9 @@ Rails.application.configure do
   #  :enable_starttls_auto => true
   # }
   ActionMailer::Base.smtp_settings = {
-  :user_name => 'amandeepkaur@codegaragetech.com',
-  :password => 'Amandeep!@#',
-  :domain => 'codegaragetech.com',
+  :user_name => 'info@eaglemovers.com.au',
+  :password => 'Service7',
+  :domain => 'eaglemovers.com.au',
   :address => 'smtp.gmail.com',
   :port => 587,
   :authentication => :plain,
