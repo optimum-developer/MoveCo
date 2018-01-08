@@ -19,18 +19,17 @@ class BookOnlineDetail < ApplicationRecord
 
 	    return "https://www.paypal.com/cgi-bin/webscr?" + values.to_query
   end
-
   def calculate_amout
   	case size_of_truck
-	when 1
+	when "4.5T/2MEN($80/hr)"
 	  amount = 80
-	when 2
+	when "6T/2MEN($90/hr)"
 	  amount = 90
-	when 3
+	when "8T/2MEN($100/hr)"
 	  amount = 100
-	when 4
+	when "10T/2MEN($110/hr)"
 	  amount = 110
-	when 5
+	when "12T/2MEN($120/hr)"
 	  amount = 120
 	else
 	  amount = "error"
