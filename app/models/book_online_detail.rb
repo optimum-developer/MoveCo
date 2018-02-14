@@ -3,6 +3,7 @@ class BookOnlineDetail < ApplicationRecord
 	validates :first_name, presence: true
   validates :mobile_phone_number, presence: true
   validates :date_to_move, presence: true
+  validates :size_of_truck, presence: true
 	def paypal_url(return_path)
 		amount_to_pay =  calculate_amout.to_s
 	    values = {
@@ -10,13 +11,12 @@ class BookOnlineDetail < ApplicationRecord
 	        cmd: "_xclick",
 	        upload: 1,
 					invoice: id,
-	        amount: "1",
+	        amount: amount_to_pay,
 	        item_name: "book",
 	        item_number: "1",
 	        quantity: '1',
 					currency_code: "AUD",
 	    }
-
 	    return "https://www.paypal.com/cgi-bin/webscr?" + values.to_query
   end
   def calculate_amout
