@@ -92,27 +92,26 @@ class HomeController < ApplicationController
 
   def call_me_back
     CallMeBackDetail.create(:phone_number=>params["phone_number"])
-    admin_message = "You have got a request for call back from " + params[:phone_number]  
-    client_message = "Hi Your call request has been sent to MoveCo. You will reciever a call shortly." 
-    account_sid = 'ACb0f41764355db14c3a603052c904b64a'
-    auth_token = 'f77af0f7227e941ef1d74f8d419de2a9'
-    @client = Twilio::REST::Client.new account_sid, auth_token
-        begin
-        # Client
-        reciever_number = "+" + params[:phone_number]
-        @client.api.account.messages.create({
-          :from => '+16783299584',
-          :to => reciever_number,
-          :body => client_message,
-          :media_url => 'https://climacons.herokuapp.com/clear.png'
-        })
-        # Admin
-        @client.api.account.messages.create({
-          :from => '+16783299584',
-          :to => '+919417537249',
-          :body => admin_message,
-          :media_url => 'https://climacons.herokuapp.com/clear.png'
-        })
+    # admin_message = "You have got a request for call back from " + params[:phone_number]  
+    # client_message = "Hi Your call request has been sent to MoveCo. You will reciever a call shortly." 
+    # account_sid = 'ACf99556a670b43cf8a537c9ce6a46528f'
+    # auth_token = 'a4e4511951bf5bbb8d3b2b1462291647'
+    # @client = Twilio::REST::Client.new account_sid, auth_token
+        # begin
+        #   debugger
+        # # Client
+        # reciever_number = "+" + params[:phone_number]
+        # @client.api.account.messages.create({
+        #   :from => '+14087174900',
+        #   :to => reciever_number,
+        #   :body => client_message,
+        # })
+        # # Admin
+        # @client.api.account.messages.create({
+        #   :from => '+14087174900',
+        #   :to => '+919463522359',
+        #   :body => admin_message,
+        # })
         
 
         respond_to do |format|
@@ -121,14 +120,14 @@ class HomeController < ApplicationController
 
         end
 
-        rescue => e
-          respond_to do |format|
-            format.html {  }
-            format.json { render :json =>{status: 200,notice_status:"false"}  }
+        # rescue => e
+        #   respond_to do |format|
+        #     format.html {  }
+        #     format.json { render :json =>{status: 200,notice_status:"false"}  }
 
-        end
+        # end
 
-        end
+    # end
 
         
   end
