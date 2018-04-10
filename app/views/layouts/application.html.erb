@@ -129,7 +129,8 @@
 	    color: #394966;
 	}
 
-		#hiddenPanel {z-index: 10001;position:fixed; top:30%; right:-200px; width:208px; background-color:whitesmoke; height:250px;}
+		#hiddenPanel {z-index: 10001;position:fixed; top:30%; right:-200px; width:208px;
+		 background-color:whitesmoke; height:250px;}
     #close-bar {cursor: pointer; top: 0px;position:absolute; left:-20px; background:#98c60d; color:white; width:27px; height:250px;}
 </style>
 <body style="padding-right: 0 ">
@@ -156,7 +157,7 @@
 							</div>
 				    	</div>
 				    	<div class="col-md-12" style="padding: 0; margin-top: 6%;" >
-							<input type="submit" onclick="call_me_back_details()" value="Request a call back" style="width: 100%; background-color: #394966;" class="">
+							<input type="submit" value="Request a call back" style="width: 100%; background-color: #394966;" class="">
 						</div>
 					</form>
   <span id="close-bar" class="myButton" > <span style="writing-mode: vertical-rl; padding-top: 45px; ">REQUEST A CALL BACK</span></span>
@@ -255,7 +256,7 @@
 							</div> -->
 				    	</div>
 				    	<div class="col-md-6" style="padding: 0" >
-							<input type="submit" onclick="call_me_back_details()" value="Request a call back" style="width: 100%; background-color: #394966;" class="">
+							<input type="submit" value="Request a call back" style="width: 100%; background-color: #394966;" class="">
 						</div>
 					</form>
 			    </div>
@@ -434,6 +435,22 @@
 
 
 	<script type="text/javascript">
+		<% if flash[:notice].present? %>
+		    message = "<%= flash[:notice]%>"
+		    type = 'success'
+		    notification(message,type)
+		  <%end%>
+
+		function notification(message,type){
+		    $.notify(message, {
+		      className:type,
+		      // clickToHide: false,
+		      // globalPosition: 'top left',
+		      // autoHideDelay: 3000
+		    });
+		  
+		  }
+
 		function close_modal()
 		{
 			modal.style.display = "none";

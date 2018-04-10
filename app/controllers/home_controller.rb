@@ -92,6 +92,13 @@ class HomeController < ApplicationController
 
   def call_me_back
     CallMeBackDetail.create(:phone_number=>params["phone_number"])
+    flash[:notice] = "Thanks for your request. We will get back to you shortly."
+    redirect_to root_path
+
+    # respond_to do |format|
+    #         format.html {  }
+    #         format.json { render :json =>{status: 200,notice_status:"true"}  }
+    # end
     # admin_message = "You have got a request for call back from " + params[:phone_number]  
     # client_message = "Hi Your call request has been sent to MoveCo. You will reciever a call shortly." 
     # account_sid = 'ACf99556a670b43cf8a537c9ce6a46528f'
@@ -114,11 +121,10 @@ class HomeController < ApplicationController
         # })
         
 
-        respond_to do |format|
-            format.html {  }
-            format.json { render :json =>{status: 200,notice_status:"true"}  }
-
-        end
+        # respond_to do |format|
+        #     format.html {  }
+        #     format.json { render :json =>{status: 200,notice_status:"true"}  }
+        # end
 
         # rescue => e
         #   respond_to do |format|
