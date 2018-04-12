@@ -91,9 +91,13 @@ class HomeController < ApplicationController
   end
 
   def call_me_back
-    CallMeBackDetail.create(:phone_number=>params["phone_number"])
-    flash[:notice] = "Thanks for your request. We will get back to you shortly."
-    redirect_to root_path
+    phone_number = params["phone_number"]
+    call_me_back_detail = CallMeBackDetail.new(:phone_number=>phone_number)
+    if call_me_back_detail.save
+      SendReqQuoteMailer.request_call_back_email_to_admin(phone_number).deliver
+      flash[:notice] = "Thanks for your request. We will get back to you shortly."
+      redirect_to root_path
+    end
 
     # respond_to do |format|
     #         format.html {  }

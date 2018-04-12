@@ -24,11 +24,10 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/csshake-little.css">
 
-
-
 <script src="/assets/vendor/modernizr-2.6.2.min.js"></script>
 <script src="//code.jquery.com/jquery-1.12.4.js"></script>
 <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 <!--[if lt IE 9]>
     <script src="/assets/vendor/html5shiv.min.js"></script>
     <script src="/assets/vendor/respond.min.js"></script>
@@ -37,7 +36,20 @@
 
 </head>
 <style type="text/css">
-
+input.failed_validation_error{
+	border-color: darkred;
+}
+select.failed_validation_error{
+	border-color: darkred;
+}
+label.failed_validation_error{
+	font-size: 64%;
+	float: right;
+	color: darkred;
+}
+p > label.failed_validation_error{
+	display: none !important;
+}
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -143,7 +155,7 @@
 <span style="color: white;">REQUEST A CALL BACK</span></a> -->
 
  <section id="hiddenPanel" class="col-md-12 col-md-6 txt-highlight-color bg-color bg-pattern">
- <form name="" action="<%=home_call_me_back_path%>" method="post" class="row form-inline wpcf7-form""  id="call_me_back_2" style="padding: 6%;margin-top: 10%;
+ <form name="" action="<%=home_call_me_back_path%>" method="post" class="row form-inline wpcf7-form"  id="call_me_back_2" style="padding: 6%;margin-top: 10%;
     margin-bottom: 10%;padding-top: 0;padding-bottom: 0;">
 				    	<div class="col-md-12" style="padding: 0; margin-top: 3%;" >
 							<div style="display: none;">
@@ -152,15 +164,18 @@
 							<div class="form-group" style=" width: 100%">
 								<div class="input-group">
 									<i class="fa fa-phone highlight" style=" margin-top: 6px; color: #868686;z-index: 10;"></i>
-									<input type="number" aria-required="true" size="30" name="phone_number" id="phone_number_2" class="form-control request_number_field" placeholder="Add your number" style="display:none; width: 100%;    margin-bottom: 1%; font-size: 14px;" required>
+									<input type="number" aria-required="true" size="30" name="phone_number" id="phone_number_2" class="form-control request_number_field" placeholder="Add your number" style="display:none; width: 100%;    margin-bottom: 1%; font-size: 14px;" required minlength=10 maxlength=10>
 								</div>
 							</div>
+							<label class="failed_validation_error">
+							</label>
 				    	</div>
 				    	<div class="col-md-12" style="padding: 0; margin-top: 6%;" >
 							<input type="submit" value="Request a call back" style="width: 100%; background-color: #394966;" class="">
 						</div>
+						 <span id="close-bar" class="myButton" > <span style="writing-mode: vertical-rl; padding-top: 45px; ">REQUEST A CALL BACK</span></span>
 					</form>
-  <span id="close-bar" class="myButton" > <span style="writing-mode: vertical-rl; padding-top: 45px; ">REQUEST A CALL BACK</span></span>
+ 
 </section>
 
 
@@ -431,16 +446,43 @@
 	<script src="/assets/compressed.js"></script>
 	<script src="/assets/main.js"></script>
     <script src="/assets/notify.js"></script>
-
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/additional-methods.js"></script>
 
 
 	<script type="text/javascript">
+		jQuery.validator.addMethod("greaterThanZero", function(value, element) {
+			      return this.optional( element ) || /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/.test( value );
+			}, "* Enter a valid phone number");
+
+		$("#call_me_back").validate({
+		  errorClass: "failed_validation_error",
+          rules: {
+            "phone_number": {
+              required: true,
+              maxlength: 10,
+              minlength: 10
+             }
+            },
+        });
+
+        $("#call_me_back_2").validate({
+		  errorClass: "failed_validation_error",
+          rules: {
+            "phone_number_2": {
+              required: true,
+              maxlength: 10,
+              minlength: 10
+             }
+            },
+        });
+	
 		<% if flash[:notice].present? %>
 		    message = "<%= flash[:notice]%>"
 		    type = 'success'
 		    notification(message,type)
 		  <%end%>
-
+		  
 		function notification(message,type){
 		    $.notify(message, {
 		      className:type,
@@ -576,6 +618,7 @@
 		}
 
 </script>
+
 
 </body>
 
