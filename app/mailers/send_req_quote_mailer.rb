@@ -8,8 +8,8 @@ class SendReqQuoteMailer < ApplicationMailer
 
 	def request_call_back_email_to_admin(phone_number)
 		@phone_number=phone_number
-		mail(:to=>"amandeepkaur@codegaragetech.com",:subject=>"REQUEST OF CALLBACK")
-		# mail(:to=>"info@eaglemovers.com.au",:subject=>"New Call back request")
+		# mail(:to=>"amandeepkaur@codegaragetech.com",:subject=>"REQUEST OF CALLBACK")
+		mail(:to=>"info@eaglemovers.com.au",:subject=>"REQUEST OF CALLBACK")
 	end
 
 	def send_quote_to_admin(id_number,user_email,description,req_name,req_date_to_move,req_phone_number,req_move_from,req_move_to,u_number)
